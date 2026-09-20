@@ -19,8 +19,6 @@
             --accent-gold: #ffb703;
             --text-main: #ffffff;
             --text-sub: #94a3b8;
-            
-            --fb-profile: "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
         }
 
         * {
@@ -34,7 +32,7 @@
             background-color: var(--bg);
             color: var(--text-main);
             min-height: 100vh;
-            padding-bottom: 80px;
+            padding-bottom: 40px;
             overflow-x: hidden;
             background-image: 
                 radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.15) 0%, transparent 45%),
@@ -60,6 +58,21 @@
             color: #fff;
             text-transform: uppercase;
             text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .research-badge {
+            background: rgba(255, 8, 68, 0.2);
+            border: 1px solid var(--accent-pink);
+            color: #ff6b8b;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
         }
 
         /* Header */
@@ -205,7 +218,7 @@
             box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35);
         }
 
-        /* High-Impact Visual Banner */
+        /* Visual Banner */
         .card-visual {
             height: 180px;
             width: 100%;
@@ -231,7 +244,6 @@
             opacity: 0.95;
         }
 
-        /* Custom Visual Gradients */
         .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
         .v-bpc { background: radial-gradient(circle, #00f5a0 0%, #00d2ff 50%, #000 100%); }
         .v-semax { background: radial-gradient(circle, #b224ef 0%, #7579ff 50%, #000 100%); }
@@ -398,7 +410,6 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            position: relative;
         }
 
         .review-card:hover {
@@ -554,6 +565,16 @@
             box-shadow: 0 0 50px rgba(24, 119, 242, 0.9);
         }
 
+        /* Footer Disclaimer */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-sub);
+            font-size: 0.8rem;
+        }
+
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.2rem; }
             header { flex-direction: column; gap: 15px; }
@@ -563,7 +584,8 @@
 <body>
 
     <div class="top-notice">
-        ⚡ EXCLUSIVE CATALOG // NAROČILA & VPRAŠANJA DIREKTNO NA FACEBOOK
+        <span>⚡ EXCLUSIVE CATALOG // NAROČILA & VPRAŠANJA DIREKTNO NA FACEBOOK</span>
+        <span class="research-badge">FOR RESEARCH PURPOSES ONLY</span>
     </div>
 
     <div class="container">
@@ -571,7 +593,7 @@
             <div class="logo">
                 MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
             </div>
-            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="fb-btn-header" target="_blank">
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="fb-btn-header" target="_blank" rel="noopener noreferrer">
                 💬 Kontaktiraj na Facebooku
             </a>
         </header>
@@ -594,7 +616,7 @@
         <!-- Product Grid -->
         <div class="grid" id="product-grid"></div>
 
-        <!-- Dedicated Reviews Section at the bottom -->
+        <!-- Dedicated Reviews Section -->
         <section class="reviews-section" id="reviews-container">
             <div class="reviews-header">
                 <h2>Mnenja Uporabnikov</h2>
@@ -605,6 +627,10 @@
             </div>
             <div class="grid" id="reviews-grid"></div>
         </section>
+
+        <footer>
+            <p>© MIA PEPTIDES. ALL PRODUCTS ARE INTENDED STRICTLY FOR RESEARCH PURPOSES ONLY.</p>
+        </footer>
     </div>
 
     <!-- Modal za opis -->
@@ -615,7 +641,7 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="modal-fb-btn" target="_blank">
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="modal-fb-btn" target="_blank" rel="noopener noreferrer">
                 📩 Pošlji Sporočilo za Naročilo
             </a>
         </div>
@@ -646,8 +672,8 @@
                 glowClass: 'v-bpc',
                 emoji: '🧬',
                 tag: 'DUAL STACK',
-                short: 'Popolna sinergija za celično obnovo kit, vezi, sklepov in odpravljanje mikrovnetij.',
-                full: 'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovo tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.'
+                short: 'Popolna sinergija za celično obnovu kit, vezi, sklepov in odpravljanje mikrovnetij.',
+                full: 'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovu tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.'
             },
             {
                 id: 'cjc-ipamorelin',
@@ -695,7 +721,7 @@
                 emoji: '🧠',
                 tag: 'BDNF BOOST',
                 short: 'Nootropna formula za kognitivni dvig, jasnost misli, koncentracijo in nevrozaščito.',
-                full: 'Semax (5mg) drastično dvigne raven BDNF (možganskega trofničnega faktorja) v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.'
+                full: 'Semax (5mg) drastično dvigne raven BDNF v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.'
             },
             {
                 id: 'selank-10mg',
@@ -707,7 +733,7 @@
                 emoji: '🛡️',
                 tag: 'STRESS RELIEF',
                 short: 'Učinkovito zmanjšuje stres in tesnobo ter omogoča miren um brez utrujenosti.',
-                full: 'Selank (10mg) je peptidna podpora za živčni sistem. Regulates GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost, obenem pa ohranja popolno budnost in bister um.'
+                full: 'Selank (10mg) je peptidna podpora za živčni sistem. Regulira GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost.'
             },
             {
                 id: 'mt1',
@@ -719,7 +745,7 @@
                 emoji: '☀️',
                 tag: 'TAN & PROTECT',
                 short: 'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo soncu ali solariju.',
-                full: 'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz kože brez nepotrebnega tveganja za opekline.'
+                full: 'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz.'
             }
         ];
 
@@ -784,7 +810,7 @@
                         <p class="card-desc">${p.short}</p>
                         <div class="card-footer">
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
-                            <a href="${FB_LINK}" target="_blank" class="btn-order">💬 Naroči na FB</a>
+                            <a href="${FB_LINK}" target="_blank" rel="noopener noreferrer" class="btn-order">💬 Naroči na FB</a>
                         </div>
                     </div>
                 </div>
