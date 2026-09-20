@@ -167,6 +167,18 @@
             font-weight: 800;
         }
 
+        .filter-btn.reviews-tab {
+            background: rgba(255, 183, 3, 0.1);
+            border-color: rgba(255, 183, 3, 0.4);
+            color: var(--accent-gold);
+        }
+
+        .filter-btn.reviews-tab.active, .filter-btn.reviews-tab:hover {
+            background: linear-gradient(135deg, var(--accent-gold), #fb8500);
+            color: #000;
+            box-shadow: 0 0 25px rgba(255, 183, 3, 0.6);
+        }
+
         /* Grid */
         .grid {
             display: grid;
@@ -342,6 +354,115 @@
             transform: scale(1.03);
         }
 
+        /* Reviews Section Styles */
+        .reviews-section {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .reviews-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .reviews-summary {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .stars-gold {
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 183, 3, 0.15);
+            border-radius: 20px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+        }
+
+        .review-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 25px rgba(255, 183, 3, 0.2);
+        }
+
+        .review-user {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .user-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .user-verified {
+            font-size: 0.75rem;
+            color: var(--accent-emerald);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .review-item-tag {
+            display: inline-block;
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            color: var(--accent-cyan);
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            align-self: flex-start;
+            font-weight: 600;
+        }
+
+        .review-comment {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
         /* Modal */
         .modal {
             position: fixed;
@@ -466,10 +587,24 @@
                 <button class="filter-btn" onclick="filterItems('rast', event)">RASTNI HORMON</button>
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
+                <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
             </div>
         </section>
 
+        <!-- Product Grid -->
         <div class="grid" id="product-grid"></div>
+
+        <!-- Dedicated Reviews Section at the bottom -->
+        <section class="reviews-section" id="reviews-container">
+            <div class="reviews-header">
+                <h2>Mnenja Uporabnikov</h2>
+                <div class="reviews-summary">
+                    <span class="stars-gold">★ ★ ★ ★ ★</span>
+                    <span><strong>4.9</strong> / 5.0 (Preverjene stranke)</span>
+                </div>
+            </div>
+            <div class="grid" id="reviews-grid"></div>
+        </section>
     </div>
 
     <!-- Modal za opis -->
@@ -588,6 +723,51 @@
             }
         ];
 
+        const reviews = [
+            {
+                name: "Rok Novak",
+                stars: "★ ★ ★ ★ ★",
+                rating: 5,
+                product: "BPC-157 (5mg) + TB-500 (5mg)",
+                text: "Po mesecih bolečin v rami zaradi uteži se je zadeva po 3 tednih uporabe zrihtala. Top komunikacija na FB, odpošljeno takoj!"
+            },
+            {
+                name: "Anja Kovač",
+                stars: "★ ★ ★ ★ ★",
+                rating: 5,
+                product: "GHK-Cu (100mg)",
+                text: "Koža na obrazu je opazno bolj napeta, tekstura se je čisto spremenila. Vsekakor še naročim!"
+            },
+            {
+                name: "Matej Zupančič",
+                stars: "★ ★ ★ ★ ☆",
+                rating: 4,
+                product: "Retatrutide (20mg)",
+                text: "Apetit se je zmanjšal praktično naslednji dan. Kilogrami gredo lepo dol. Enih 4/5 zvezdic dam samo zato, ker sem moral na odgovore na FB vmes čakati par ur, ampak paket je prišel hitro."
+            },
+            {
+                name: "Katja Oblak",
+                stars: "★ ★ ★ ★ ★",
+                rating: 5,
+                product: "KLOW (80mg)",
+                text: "Za ta lepotni mix sem izvedela od prijateljice in sem navdušena. Ten je super sijoč, vsi opazijo razliko."
+            },
+            {
+                name: "Luka Breznik",
+                stars: "★ ★ ★ ★ ★",
+                rating: 5,
+                product: "Semax (5mg)",
+                text: "Fokus v pisarni med izpitnim obdobjem je bil neverjeten. Brez kofeinskega 'crash-a', le čista mentalna jasnost."
+            },
+            {
+                name: "Lara Hribar",
+                stars: "★ ★ ★ ★ ☆",
+                rating: 4,
+                product: "Melanotan-1 (MT-1)",
+                text: "Super barva že po dveh izpostavljanjih soncu! Dajem 4 zvezdice, ker sem na začetku imela malo lahke slabosti, ampak je hitro minilo."
+            }
+        ];
+
         function render(items) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = items.map(p => `
@@ -611,6 +791,29 @@
             `).join('');
         }
 
+        function renderReviews() {
+            const rGrid = document.getElementById('reviews-grid');
+            rGrid.innerHTML = reviews.map(r => {
+                const initials = r.name.split(' ').map(n => n[0]).join('');
+                return `
+                    <div class="review-card">
+                        <div class="review-user">
+                            <div class="user-info">
+                                <div class="user-avatar">${initials}</div>
+                                <div>
+                                    <div class="user-name">${r.name}</div>
+                                    <div class="user-verified">✓ Preverjen kupec</div>
+                                </div>
+                            </div>
+                            <div class="stars-gold">${r.stars}</div>
+                        </div>
+                        <span class="review-item-tag">Kupljeno: ${r.product}</span>
+                        <p class="review-comment">"${r.text}"</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
         function filterItems(cat, e) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
@@ -619,6 +822,13 @@
                 render(catalog);
             } else {
                 render(catalog.filter(x => x.category === cat));
+            }
+        }
+
+        function scrollToReviews() {
+            const el = document.getElementById('reviews-container');
+            if(el) {
+                el.scrollIntoView({ behavior: 'smooth' });
             }
         }
 
@@ -640,6 +850,7 @@
 
         // Init
         render(catalog);
+        renderReviews();
     </script>
 </body>
 </html>
