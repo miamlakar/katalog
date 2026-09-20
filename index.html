@@ -119,6 +119,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            cursor: pointer;
         }
 
         .fb-btn-header:hover {
@@ -558,6 +559,7 @@
             text-decoration: none;
             box-shadow: 0 0 35px rgba(24, 119, 242, 0.6);
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .modal-fb-btn:hover {
@@ -593,7 +595,7 @@
             <div class="logo">
                 MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
             </div>
-            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="fb-btn-header" target="_blank" rel="noopener noreferrer">
+            <a onclick="openFacebookLink()" class="fb-btn-header">
                 💬 Kontaktiraj na Facebooku
             </a>
         </header>
@@ -641,14 +643,19 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="modal-fb-btn" target="_blank" rel="noopener noreferrer">
+            <a onclick="openFacebookLink()" class="modal-fb-btn">
                 📩 Pošlji Sporočilo za Naročilo
             </a>
         </div>
     </div>
 
     <script>
-        const FB_LINK = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+        const FB_WEB_LINK = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+
+        function openFacebookLink() {
+            // Preusmeritev, ki pravilno deluje tudi znotraj Facebook vgrajenega brskalnika
+            window.location.href = FB_WEB_LINK;
+        }
 
         const catalog = [
             {
@@ -709,7 +716,7 @@
                 emoji: '👑',
                 tag: 'PREMIUM COMPLEX',
                 short: 'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.',
-                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovo celične strukture.'
+                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične strukture.'
             },
             {
                 id: 'semax-5mg',
@@ -810,7 +817,7 @@
                         <p class="card-desc">${p.short}</p>
                         <div class="card-footer">
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
-                            <a href="${FB_LINK}" target="_blank" rel="noopener noreferrer" class="btn-order">💬 Naroči na FB</a>
+                            <a onclick="openFacebookLink()" class="btn-order">💬 Naroči na FB</a>
                         </div>
                     </div>
                 </div>
