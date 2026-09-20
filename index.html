@@ -518,7 +518,7 @@
             <div class="logo">
                 MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
             </div>
-            <a href="https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/" class="fb-btn-header" onclick="openFacebookLink(event)">
+            <a href="https://www.facebook.com/@miamlakarr" class="fb-btn-header" onclick="openFacebookLink(event)">
                 💬 Kontaktiraj na Facebooku
             </a>
         </header>
@@ -557,27 +557,29 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/" class="modal-fb-btn" onclick="openFacebookLink(event)">
+            <a href="https://m.me/miamlakarr" class="modal-fb-btn" onclick="openFacebookChat(event)">
                 📩 Pošlji Sporočilo za Naročilo
             </a>
         </div>
     </div>
     <script>
-        const FB_PROFILE_WEB = "https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/";
-        const FB_PROFILE_MOBILE = "https://m.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/";
+        const FB_USERNAME = "miamlakarr";
+        const FB_PROFILE = "https://www.facebook.com/@" + FB_USERNAME;
+        const FB_CHAT = "https://m.me/" + FB_USERNAME;
 
-        function isFacebookInApp() {
+        function isMetaInApp() {
             const ua = navigator.userAgent || "";
             return /FBAN|FBAV|FB_IAB|FBIOS|FB4A|FBSS|Instagram/i.test(ua);
         }
 
         function openFacebookLink(e) {
             if (e) e.preventDefault();
-            if (isFacebookInApp()) {
-                window.location.href = FB_PROFILE_MOBILE;
-                return;
-            }
-            window.location.href = FB_PROFILE_WEB;
+            window.location.assign(isMetaInApp() ? FB_CHAT : FB_PROFILE);
+        }
+
+        function openFacebookChat(e) {
+            if (e) e.preventDefault();
+            window.location.assign(FB_CHAT);
         }
 
         const catalog = [
@@ -738,7 +740,7 @@
                         <p class="card-desc">${p.short}</p>
                         <div class="card-footer">
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
-                            <a href="${FB_PROFILE_WEB}" onclick="openFacebookLink(event)" class="btn-order">💬 Naroči na FB</a>
+                            <a href="${FB_CHAT}" onclick="openFacebookChat(event)" class="btn-order">💬 Naroči na FB</a>
                         </div>
                     </div>
                 </div>
