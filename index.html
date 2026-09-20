@@ -87,15 +87,15 @@
         .btn-details { flex: 1; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 12px; border-radius: 14px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease; }
         .btn-details:hover { background: rgba(255, 255, 255, 0.18); }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(22px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        .btn-test { display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 10px; background: rgba(0, 245, 160, 0.08); border: 1px solid rgba(0, 245, 160, 0.35); color: var(--accent-emerald); padding: 10px; border-radius: 14px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease; }
+        .btn-test { display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 10px; min-height: 44px; background: rgba(0, 245, 160, 0.08); border: 1px solid rgba(0, 245, 160, 0.35); color: var(--accent-emerald); padding: 10px; border-radius: 14px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: rgba(0, 245, 160, 0.25); position: relative; z-index: 6; pointer-events: auto; }
         .btn-test:hover { background: rgba(0, 245, 160, 0.18); box-shadow: 0 0 18px rgba(0, 245, 160, 0.35); }
-        .lab-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid rgba(0, 245, 160, 0.2); border-radius: 24px; padding: 26px; backdrop-filter: blur(16px); cursor: pointer; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; }
+        .lab-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid rgba(0, 245, 160, 0.2); border-radius: 24px; padding: 26px; backdrop-filter: blur(16px); cursor: pointer; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; touch-action: manipulation; -webkit-tap-highlight-color: rgba(0, 245, 160, 0.25); position: relative; z-index: 6; pointer-events: auto; }
         .lab-card:hover { transform: translateY(-8px); border-color: var(--accent-emerald); box-shadow: 0 15px 35px -10px rgba(0, 245, 160, 0.35); }
         .lab-badge { align-self: flex-start; background: rgba(0, 245, 160, 0.12); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 1.4px; padding: 4px 10px; border-radius: 12px; font-weight: 700; }
         .lab-card h3 { font-size: 1.35rem; font-weight: 800; color: #fff; }
         .lab-card p { color: var(--text-sub); font-size: 0.9rem; line-height: 1.5; flex-grow: 1; }
         .lab-card-cta { color: var(--accent-emerald); font-weight: 800; font-size: 0.88rem; letter-spacing: 0.8px; text-transform: uppercase; }
-        .btn-order { flex: 1.2; background: linear-gradient(135deg, #1877f2, #00f2fe); color: #fff; border: none; padding: 12px; border-radius: 14px; font-weight: 800; font-size: 0.88rem; letter-spacing: 0.4px; cursor: pointer; text-decoration: none; text-align: center; box-shadow: 0 0 18px rgba(24, 119, 242, 0.65); display: flex; align-items: center; justify-content: center; animation: orderGlow 1.8s ease-in-out infinite; text-transform: uppercase; }
+        .btn-order { flex: 1.2; background: linear-gradient(135deg, #1877f2, #00f2fe); color: #fff; border: none; padding: 12px; border-radius: 14px; font-weight: 800; font-size: 0.88rem; letter-spacing: 0.4px; cursor: pointer; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; animation: orderGlow 1.8s ease-in-out infinite; text-transform: uppercase; }
         @keyframes orderGlow { 0%, 100% { box-shadow: 0 0 14px rgba(24, 119, 242, 0.55), 0 0 28px rgba(0, 242, 254, 0.25); } 50% { box-shadow: 0 0 28px rgba(24, 119, 242, 0.95), 0 0 46px rgba(0, 242, 254, 0.55); } }
         .reviews-section { margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .reviews-header { text-align: center; margin-bottom: 40px; }
@@ -120,7 +120,7 @@
         .modal-sub { color: var(--text-sub); font-size: 0.95rem; margin-bottom: 20px; }
         .modal-text { color: #cbd5e1; line-height: 1.65; font-size: 0.98rem; margin-bottom: 28px; }
         .modal-fb-btn { display: flex; align-items: center; justify-content: center; width: 100%; background: linear-gradient(135deg, #1877f2, #00f2fe); color: #fff; padding: 16px; border-radius: 16px; font-weight: 800; font-size: 1.05rem; text-decoration: none; text-transform: uppercase; animation: orderGlow 1.8s ease-in-out infinite; }
-        .modal-test-btn { display: none; align-items: center; justify-content: center; width: 100%; margin-bottom: 12px; background: rgba(0, 245, 160, 0.1); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); padding: 14px; border-radius: 16px; font-weight: 800; font-size: 0.95rem; text-decoration: none; text-transform: uppercase; }
+        .modal-test-btn { display: none; align-items: center; justify-content: center; width: 100%; margin-bottom: 12px; background: rgba(0, 245, 160, 0.1); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); padding: 14px; border-radius: 16px; font-weight: 800; font-size: 0.95rem; text-decoration: none; text-transform: uppercase; cursor: pointer; touch-action: manipulation; min-height: 48px; position: relative; z-index: 6; pointer-events: auto; }
         .modal-test-btn.show { display: flex; }
         footer { margin-top: 60px; text-align: center; padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-sub); font-size: 0.8rem; }
         @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } header { flex-direction: column; gap: 15px; } }
@@ -170,7 +170,7 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="#" id="modal-test-btn" class="modal-test-btn" target="_blank" rel="noopener">Poglej test</a>
+            <a href="#" id="modal-test-btn" class="modal-test-btn" onclick="return openTest(event, this.getAttribute('data-url') || this.href)">Poglej test</a>
             <a href="https://m.me/miamlakarr" id="modal-order-btn" class="modal-fb-btn" onclick="openMessenger(event, currentProductName)">⚡ Naroči zdaj</a>
         </div>
     </div>
@@ -183,6 +183,15 @@
             const item = productName || currentProductName;
             if (item) url += "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + item + ".");
             window.location.assign(url);
+            return false;
+        }
+        function openTest(e, url) {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            if (!url || url === '#' || url.indexOf('http') !== 0) return false;
+            try {
+                if (window.top && window.top !== window) window.top.location.href = url;
+                else window.location.assign(url);
+            } catch (err) { window.location.href = url; }
             return false;
         }
         const catalog = [
@@ -216,7 +225,7 @@
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
                             <a href="${FB_CHAT}" class="btn-order" onclick="openMessenger(event, '${p.name.replace(/'/g, "\\'")}')">⚡ Naroči zdaj</a>
                         </div>
-                        ${p.testUrl ? `<a class="btn-test" href="${p.testUrl}" target="_blank" rel="noopener">Poglej test</a>` : ''}
+                        ${p.testUrl ? `<a class="btn-test" href="${p.testUrl}" onclick="return openTest(event, '${p.testUrl}')">Poglej test</a>` : ''}
                     </div>
                 </div>`).join('');
         }
@@ -225,7 +234,7 @@
             if (e && e.target) e.target.classList.add('active');
             const grid = document.getElementById('product-grid');
             grid.innerHTML = catalog.filter(x => x.testUrl).map((p, i) => `
-                <a class="lab-card" href="${p.testUrl}" target="_blank" rel="noopener" style="animation-delay:${i * 0.07}s">
+                <a class="lab-card" href="${p.testUrl}" onclick="return openTest(event, '${p.testUrl}')" style="animation-delay:${i * 0.07}s">
                     <span class="lab-badge">JANOSHIK VERIFY</span>
                     <h3>${p.name}</h3>
                     <p>Neodvisni laboratorijski test. Klikni in odpri originalno poročilo na Janoshik.</p>
@@ -260,8 +269,8 @@
             if (orderBtn) orderBtn.href = FB_CHAT + "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + p.name + ".");
             const testBtn = document.getElementById('modal-test-btn');
             if (testBtn) {
-                if (p.testUrl) { testBtn.href = p.testUrl; testBtn.classList.add('show'); }
-                else { testBtn.href = '#'; testBtn.classList.remove('show'); }
+                if (p.testUrl) { testBtn.href = p.testUrl; testBtn.setAttribute('data-url', p.testUrl); testBtn.classList.add('show'); }
+                else { testBtn.href = '#'; testBtn.removeAttribute('data-url'); testBtn.classList.remove('show'); }
             }
             document.getElementById('details-modal').classList.add('active');
         }
