@@ -1,0 +1,618 @@
+<!-- language: HTML/CSS/JS, file: index.html, target: Modern Browsers -->
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIA PEPTIDES // Exclusive Visual Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #06080e;
+            --card-bg: rgba(15, 20, 32, 0.75);
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --accent-purple: #b224ef;
+            --accent-pink: #ff0844;
+            --accent-emerald: #00f5a0;
+            --text-main: #ffffff;
+            --text-sub: #94a3b8;
+            
+            --fb-profile: "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 80px;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 90% 50%, rgba(178, 36, 239, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(0, 245, 160, 0.1) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Announcement Bar */
+        .top-notice {
+            background: linear-gradient(90deg, rgba(0, 242, 254, 0.2), rgba(178, 36, 239, 0.3), rgba(0, 242, 254, 0.2));
+            border-bottom: 1px solid rgba(0, 242, 254, 0.3);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-badge {
+            background: rgba(0, 242, 254, 0.15);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            -webkit-text-fill-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .fb-btn-header {
+            background: linear-gradient(135deg, #1877f2, #0052cc);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 0 25px rgba(24, 119, 242, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .fb-btn-header:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 0 35px rgba(24, 119, 242, 0.8);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Filter Tabs */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-sub);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #000;
+            border-color: transparent;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+            font-weight: 800;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Structure */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35);
+        }
+
+        /* High-Impact Visual Banner (Absence of flat images) */
+        .card-visual {
+            height: 180px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .visual-glow {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            opacity: 0.7;
+            filter: blur(30px);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .card:hover .visual-glow {
+            transform: scale(1.2);
+            opacity: 0.95;
+        }
+
+        /* Custom Visual Gradients for categories */
+        .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
+        .v-bpc { background: radial-gradient(circle, #00f5a0 0%, #00d2ff 50%, #000 100%); }
+        .v-semax { background: radial-gradient(circle, #b224ef 0%, #7579ff 50%, #000 100%); }
+        .v-selank { background: radial-gradient(circle, #ff0844 0%, #ffb199 50%, #000 100%); }
+        .v-ghk { background: radial-gradient(circle, #00c6ff 0%, #0072ff 50%, #000 100%); }
+        .v-mt1 { background: radial-gradient(circle, #f857a6 0%, #ff5858 50%, #000 100%); }
+
+        .visual-symbol {
+            position: relative;
+            z-index: 2;
+            font-size: 3.5rem;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .visual-symbol {
+            transform: scale(1.15) rotate(3deg);
+        }
+
+        .visual-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-cat {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+        }
+
+        .card-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .card-sub {
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+
+        .card-desc {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            margin-bottom: 22px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-details {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 12px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-details:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-order {
+            flex: 1.2;
+            background: linear-gradient(135deg, #1877f2, #0052cc);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(24, 119, 242, 0.4);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-order:hover {
+            box-shadow: 0 0 30px rgba(24, 119, 242, 0.8);
+            transform: scale(1.03);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #0d121f;
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 0 60px rgba(0, 242, 254, 0.3);
+            border-radius: 24px;
+            max-width: 580px;
+            width: 100%;
+            padding: 32px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px; right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .modal-cat {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .modal-sub {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .modal-text {
+            color: #cbd5e1;
+            line-height: 1.65;
+            font-size: 0.98rem;
+            margin-bottom: 28px;
+        }
+
+        .modal-fb-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #1877f2, #0052cc);
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            box-shadow: 0 0 35px rgba(24, 119, 242, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .modal-fb-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 50px rgba(24, 119, 242, 0.9);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-notice">
+        ⚡ EXCLUSIVE CATALOG // NAROČILA & VPRAŠANJA DIREKTNO NA FACEBOOK
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
+            </div>
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="fb-btn-header" target="_blank">
+                💬 Kontaktiraj na Facebooku
+            </a>
+        </header>
+
+        <section class="hero">
+            <h1>Pregled Top Peptidov</h1>
+            <p>Izberi spojino za podroben opis. Za vsa naročila, zalogo ali nasvet nas kontaktiraj direktno preko sporočila.</p>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterItems('vse', event)">VSI IZDELKI</button>
+                <button class="filter-btn" onclick="filterItems('metabolizem', event)">METABOLIZEM</button>
+                <button class="filter-btn" onclick="filterItems('obnova', event)">OBNOVA TKIV</button>
+                <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
+                <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
+            </div>
+        </section>
+
+        <div class="grid" id="product-grid"></div>
+    </div>
+
+    <!-- Modal za opis -->
+    <div class="modal" id="details-modal">
+        <div class="modal-box">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="modal-cat" id="m-cat"></div>
+            <h2 class="modal-title" id="m-title"></h2>
+            <div class="modal-sub" id="m-sub"></div>
+            <p class="modal-text" id="m-text"></p>
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" class="modal-fb-btn" target="_blank">
+                📩 Pošlji Sporočilo za Naročilo
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const FB_LINK = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+
+        const catalog = [
+            {
+                id: 'retatrutide',
+                name: 'Retatrutide',
+                sub: 'Triple Agonist (GLP-1 / GIP / Glucagon)',
+                category: 'metabolizem',
+                catLabel: 'Metabolizem & Oksidacija',
+                glowClass: 'v-retatrutide',
+                emoji: '⚡',
+                tag: '99.8% PURITY',
+                short: 'Najnovejša in najmočnejša formula za regulacijo apetita ter pospešeno oksidacijo maščob.',
+                full: 'Retatrutide je trenutno najbolj napredna spojina v presnovni znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje ne le drastično zmanjšuje lakoto, temveč direktno spodbuja telo k porabi maščobnih zalog kot primarnega vir energijskega goriva.'
+            },
+            {
+                id: 'bpc157-tb500',
+                name: 'BPC-157 + TB-500',
+                sub: 'Regenerativna Matrix Formula',
+                category: 'obnova',
+                catLabel: 'Obnova Kit & Sklepov',
+                glowClass: 'v-bpc',
+                emoji: '🧬',
+                tag: 'RECOVERY STACK',
+                short: 'Zlati standard za celjenje kit, vezi, mišic ter hitro odpravljanje vnetij v telesu.',
+                full: 'Popolna sinergijska kombinacija dveh regenerativnih peptidov. BPC-157 lokalno stimulira tvorbo novih žil in hitro celi poškodbe kit ter sluznice, TB-500 pa sistemsko pospešuje gibljivost celic in obnovo celotnega aparata.'
+            },
+            {
+                id: 'semax',
+                name: 'Semax',
+                sub: 'Kognitivni Heptapeptid',
+                category: 'možgani',
+                catLabel: 'Fokus & Spomin',
+                glowClass: 'v-semax',
+                emoji: '🧠',
+                tag: 'BDNF BOOST',
+                short: 'Močan nootropik za dvig BDNF, večji fokus, jasnost misli in zaščito živčevja.',
+                full: 'Semax je bil razvit za opazno izboljšanje delovanja osrednjega živčnega sistema. Diguje raven BDNF (možganskega trofničnega faktorja), kar prinaša izjemno mentalno jasnost, hitro učenje in dolgotrajen fokus brez nemira ali kofeinskega padca.'
+            },
+            {
+                id: 'selank',
+                name: 'Selank',
+                sub: 'Anksiolitični Peptid',
+                category: 'možgani',
+                catLabel: 'Fokus & Spomin',
+                glowClass: 'v-selank',
+                emoji: '🛡️',
+                tag: 'STRESS RELIEF',
+                short: 'Odstranjuje stres in tesnobo brez sedacije ter omogoča miren in jasen um.',
+                full: 'Selank deluje kot stabilizator živčnega sistema preko modulacije GABA receptorjev. Učinkovito zmanjšuje anksioznost, mentalni pritisk in stres, medtem ko ohranja popolno budnost, ostro razmišljanje in umirjenost.'
+            },
+            {
+                id: 'ghkcu',
+                name: 'GHK-Cu',
+                sub: 'Bakrov Tripeptid-1',
+                category: 'lepota',
+                catLabel: 'Koža & Estetika',
+                glowClass: 'v-ghk',
+                emoji: '✨',
+                tag: 'COLLAGEN BUILDER',
+                short: 'Spodbuja kolagen, obnavlja strukturo kože, zgladi gubice in pospešuje rast las.',
+                full: 'GHK-Cu je vodilni peptid na področju dermatološke regeneracije. Vpliva na izražanje tisočih genov, spodbuja naravno sintezo kolagena ter elastina, obnavlja elastičnost kože in stimulira lasne mešičke.'
+            },
+            {
+                id: 'mt1',
+                name: 'Melanotan-1',
+                sub: 'Selektivni Melanin Agonist',
+                category: 'lepota',
+                catLabel: 'Koža & Estetika',
+                glowClass: 'v-mt1',
+                emoji: '☀️',
+                tag: 'TAN & PROTECT',
+                short: 'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo UV žarkom.',
+                full: 'Melanotan-1 je selektivni agonist MC1R receptorjev. Spodbuja melanocite k tvorbi temnega pigmenta (eumelanina), kar omogoča čudovito in enakomerno porjavelost kože brez pretiranega in škodljivega cvrtja na soncu.'
+            }
+        ];
+
+        function render(items) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = items.map(p => `
+                <div class="card">
+                    <div class="card-visual">
+                        <div class="visual-glow ${p.glowClass}"></div>
+                        <div class="visual-symbol">${p.emoji}</div>
+                        <span class="visual-tag">${p.tag}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-cat">${p.catLabel}</div>
+                        <h3 class="card-title">${p.name}</h3>
+                        <div class="card-sub">${p.sub}</div>
+                        <p class="card-desc">${p.short}</p>
+                        <div class="card-footer">
+                            <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
+                            <a href="${FB_LINK}" target="_blank" class="btn-order">💬 Naroči na FB</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterItems(cat, e) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+
+            if(cat === 'vse') {
+                render(catalog);
+            } else {
+                render(catalog.filter(x => x.category === cat));
+            }
+        }
+
+        function openModal(id) {
+            const p = catalog.find(x => x.id === id);
+            if(!p) return;
+
+            document.getElementById('m-cat').innerText = p.catLabel;
+            document.getElementById('m-title').innerText = p.name;
+            document.getElementById('m-sub').innerText = p.sub;
+            document.getElementById('m-text').innerText = p.full;
+
+            document.getElementById('details-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('details-modal').classList.remove('active');
+        }
+
+        // Init
+        render(catalog);
+    </script>
+</body>
+</html>
