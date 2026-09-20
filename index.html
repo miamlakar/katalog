@@ -73,6 +73,14 @@
             justify-content: space-between;
             align-items: center;
             padding: 30px 0;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         .logo {
             font-size: 1.6rem;
@@ -134,6 +142,48 @@
                 box-shadow:
                     0 0 22px rgba(79, 172, 254, 0.65),
                     0 0 40px rgba(0, 242, 254, 0.38),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            }
+        }
+        .wa-btn-header {
+            background: linear-gradient(135deg, #25d366 0%, #1ebe5d 55%, #b9f6ca 100%);
+            color: #06210f;
+            padding: 13px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            box-shadow:
+                0 0 16px rgba(37, 211, 102, 0.5),
+                0 0 32px rgba(18, 140, 126, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.55);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            animation: waGlow 2.6s ease-in-out infinite;
+        }
+        .wa-btn-header:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow:
+                0 0 24px rgba(37, 211, 102, 0.8),
+                0 0 44px rgba(18, 140, 126, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        }
+        @keyframes waGlow {
+            0%, 100% {
+                box-shadow:
+                    0 0 14px rgba(37, 211, 102, 0.45),
+                    0 0 28px rgba(18, 140, 126, 0.22),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow:
+                    0 0 22px rgba(37, 211, 102, 0.75),
+                    0 0 40px rgba(18, 140, 126, 0.4),
                     inset 0 1px 0 rgba(255, 255, 255, 0.7);
             }
         }
@@ -562,9 +612,14 @@
             <div class="logo">
                 MIA LAB <span class="logo-badge">VERIFIED</span>
             </div>
-            <a href="https://m.me/miamlakarr" class="fb-btn-header" onclick="openMessenger(event)">
-                KONTAKTIRAJ NAS
-            </a>
+            <div class="header-actions">
+                <a href="https://wa.me/message/TRV4OCQQ3FDYD1" target="_blank" rel="noopener" class="wa-btn-header">
+                    WHATSAPP
+                </a>
+                <a href="https://m.me/miamlakarr" class="fb-btn-header" onclick="openMessenger(event)">
+                    KONTAKTIRAJ NAS
+                </a>
+            </div>
         </header>
         <section class="hero">
             <h1>Izbrana Kolekcija</h1>
