@@ -20,33 +20,28 @@
             --text-main: #ffffff;
             --text-sub: #94a3b8;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-
         body {
             background-color: var(--bg);
             color: var(--text-main);
             min-height: 100vh;
             padding-bottom: 40px;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 90% 50%, rgba(178, 36, 239, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 50% 90%, rgba(0, 245, 160, 0.1) 0%, transparent 40%);
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* Top Announcement Bar */
         .top-notice {
             background: linear-gradient(90deg, rgba(0, 242, 254, 0.2), rgba(178, 36, 239, 0.3), rgba(0, 242, 254, 0.2));
             border-bottom: 1px solid rgba(0, 242, 254, 0.3);
@@ -64,7 +59,6 @@
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .research-badge {
             background: rgba(255, 8, 68, 0.2);
             border: 1px solid var(--accent-pink);
@@ -74,15 +68,12 @@
             font-size: 0.72rem;
             letter-spacing: 1.5px;
         }
-
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 30px 0;
         }
-
         .logo {
             font-size: 1.6rem;
             font-weight: 800;
@@ -94,7 +85,6 @@
             align-items: center;
             gap: 10px;
         }
-
         .logo-badge {
             background: rgba(0, 242, 254, 0.15);
             border: 1px solid var(--accent-cyan);
@@ -105,7 +95,6 @@
             -webkit-text-fill-color: var(--accent-cyan);
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
         }
-
         .fb-btn-header {
             background: linear-gradient(135deg, #1877f2, #0052cc);
             color: #fff;
@@ -121,18 +110,14 @@
             gap: 8px;
             cursor: pointer;
         }
-
         .fb-btn-header:hover {
             transform: translateY(-2px) scale(1.03);
             box-shadow: 0 0 35px rgba(24, 119, 242, 0.8);
         }
-
-        /* Hero */
         .hero {
             text-align: center;
             padding: 40px 0 20px;
         }
-
         .hero h1 {
             font-size: 3.2rem;
             font-weight: 800;
@@ -143,15 +128,12 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
         }
-
         .hero p {
             color: var(--text-sub);
             font-size: 1.15rem;
             max-width: 650px;
             margin: 0 auto;
         }
-
-        /* Filter Tabs */
         .filters {
             display: flex;
             justify-content: center;
@@ -159,7 +141,6 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
-
         .filter-btn {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -172,7 +153,6 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-
         .filter-btn.active, .filter-btn:hover {
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
             color: #000;
@@ -180,27 +160,21 @@
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
             font-weight: 800;
         }
-
         .filter-btn.reviews-tab {
             background: rgba(255, 183, 3, 0.1);
             border-color: rgba(255, 183, 3, 0.4);
             color: var(--accent-gold);
         }
-
         .filter-btn.reviews-tab.active, .filter-btn.reviews-tab:hover {
             background: linear-gradient(135deg, var(--accent-gold), #fb8500);
             color: #000;
             box-shadow: 0 0 25px rgba(255, 183, 3, 0.6);
         }
-
-        /* Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
         }
-
-        /* Card Structure */
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -212,14 +186,11 @@
             flex-direction: column;
             position: relative;
         }
-
         .card:hover {
             transform: translateY(-8px);
             border-color: var(--accent-cyan);
             box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35);
         }
-
-        /* Visual Banner */
         .card-visual {
             height: 180px;
             width: 100%;
@@ -230,7 +201,6 @@
             overflow: hidden;
             background: #000;
         }
-
         .visual-glow {
             position: absolute;
             width: 120%;
@@ -239,12 +209,10 @@
             filter: blur(30px);
             transition: transform 0.5s ease, opacity 0.5s ease;
         }
-
         .card:hover .visual-glow {
             transform: scale(1.2);
             opacity: 0.95;
         }
-
         .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
         .v-bpc { background: radial-gradient(circle, #00f5a0 0%, #00d2ff 50%, #000 100%); }
         .v-semax { background: radial-gradient(circle, #b224ef 0%, #7579ff 50%, #000 100%); }
@@ -253,7 +221,6 @@
         .v-mt1 { background: radial-gradient(circle, #f857a6 0%, #ff5858 50%, #000 100%); }
         .v-cjc { background: radial-gradient(circle, #ffb703 0%, #fb8500 50%, #000 100%); }
         .v-klow { background: radial-gradient(circle, #a855f7 0%, #ec4899 50%, #000 100%); }
-
         .visual-symbol {
             position: relative;
             z-index: 2;
@@ -261,11 +228,9 @@
             filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
             transition: transform 0.3s ease;
         }
-
         .card:hover .visual-symbol {
             transform: scale(1.15) rotate(3deg);
         }
-
         .visual-tag {
             position: absolute;
             top: 15px;
@@ -281,15 +246,12 @@
             border-radius: 12px;
             letter-spacing: 1px;
         }
-
-        /* Card Content */
         .card-body {
             padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
-
         .card-cat {
             font-size: 0.75rem;
             font-weight: 700;
@@ -298,33 +260,28 @@
             color: var(--accent-cyan);
             margin-bottom: 6px;
         }
-
         .card-title {
             font-size: 1.45rem;
             font-weight: 800;
             margin-bottom: 4px;
             color: #fff;
         }
-
         .card-sub {
             color: var(--text-sub);
             font-size: 0.85rem;
             margin-bottom: 14px;
         }
-
         .card-desc {
             color: #cbd5e1;
             font-size: 0.9rem;
             line-height: 1.55;
             margin-bottom: 22px;
         }
-
         .card-footer {
             margin-top: auto;
             display: flex;
             gap: 10px;
         }
-
         .btn-details {
             flex: 1;
             background: rgba(255, 255, 255, 0.06);
@@ -337,11 +294,9 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
         .btn-details:hover {
             background: rgba(255, 255, 255, 0.18);
         }
-
         .btn-order {
             flex: 1.2;
             background: linear-gradient(135deg, #1877f2, #0052cc);
@@ -361,24 +316,19 @@
             justify-content: center;
             gap: 6px;
         }
-
         .btn-order:hover {
             box-shadow: 0 0 30px rgba(24, 119, 242, 0.8);
             transform: scale(1.03);
         }
-
-        /* Reviews Section Styles */
         .reviews-section {
             margin-top: 80px;
             padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .reviews-header {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .reviews-header h2 {
             font-size: 2.2rem;
             font-weight: 800;
@@ -387,7 +337,6 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-
         .reviews-summary {
             font-size: 1.1rem;
             color: var(--text-sub);
@@ -396,12 +345,10 @@
             justify-content: center;
             gap: 8px;
         }
-
         .stars-gold {
             color: var(--accent-gold);
             letter-spacing: 2px;
         }
-
         .review-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 183, 3, 0.15);
@@ -412,24 +359,20 @@
             flex-direction: column;
             gap: 12px;
         }
-
         .review-card:hover {
             border-color: var(--accent-gold);
             box-shadow: 0 0 25px rgba(255, 183, 3, 0.2);
         }
-
         .review-user {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-
         .user-info {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
         .user-avatar {
             width: 42px;
             height: 42px;
@@ -442,13 +385,11 @@
             font-size: 1rem;
             color: #fff;
         }
-
         .user-name {
             font-weight: 700;
             font-size: 1rem;
             color: #fff;
         }
-
         .user-verified {
             font-size: 0.75rem;
             color: var(--accent-emerald);
@@ -456,7 +397,6 @@
             align-items: center;
             gap: 4px;
         }
-
         .review-item-tag {
             display: inline-block;
             background: rgba(0, 242, 254, 0.1);
@@ -468,14 +408,11 @@
             align-self: flex-start;
             font-weight: 600;
         }
-
         .review-comment {
             color: #cbd5e1;
             font-size: 0.95rem;
             line-height: 1.5;
         }
-
-        /* Modal */
         .modal {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
@@ -487,11 +424,9 @@
             z-index: 1000;
             padding: 20px;
         }
-
         .modal.active {
             display: flex;
         }
-
         .modal-box {
             background: #0d121f;
             border: 1px solid var(--accent-cyan);
@@ -504,7 +439,6 @@
             max-height: 90vh;
             overflow-y: auto;
         }
-
         .close-btn {
             position: absolute;
             top: 20px; right: 20px;
@@ -516,7 +450,6 @@
             font-size: 1.2rem;
             cursor: pointer;
         }
-
         .modal-cat {
             font-size: 0.75rem;
             font-weight: 700;
@@ -525,27 +458,23 @@
             letter-spacing: 1.5px;
             margin-bottom: 6px;
         }
-
         .modal-title {
             font-size: 2rem;
             font-weight: 800;
             margin-bottom: 4px;
             color: #fff;
         }
-
         .modal-sub {
             color: var(--text-sub);
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
-
         .modal-text {
             color: #cbd5e1;
             line-height: 1.65;
             font-size: 0.98rem;
             margin-bottom: 28px;
         }
-
         .modal-fb-btn {
             display: block;
             width: 100%;
@@ -561,13 +490,10 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
         .modal-fb-btn:hover {
             transform: scale(1.02);
             box-shadow: 0 0 50px rgba(24, 119, 242, 0.9);
         }
-
-        /* Footer Disclaimer */
         footer {
             margin-top: 60px;
             text-align: center;
@@ -576,7 +502,6 @@
             color: var(--text-sub);
             font-size: 0.8rem;
         }
-
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.2rem; }
             header { flex-direction: column; gap: 15px; }
@@ -584,26 +509,22 @@
     </style>
 </head>
 <body>
-
     <div class="top-notice">
         <span>⚡ EXCLUSIVE CATALOG // NAROČILA & VPRAŠANJA DIREKTNO NA FACEBOOK</span>
         <span class="research-badge">FOR RESEARCH PURPOSES ONLY</span>
     </div>
-
     <div class="container">
         <header>
             <div class="logo">
                 MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
             </div>
-            <a href="javascript:void(0)" onclick="openFacebookLink(event)" class="fb-btn-header">
+            <a href="https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/" class="fb-btn-header" onclick="openFacebookLink(event)">
                 💬 Kontaktiraj na Facebooku
             </a>
         </header>
-
         <section class="hero">
             <h1>Pregled Top Peptidov</h1>
             <p>Izberi spojino za podroben opis. Za vsa naročila, zalogo ali nasvet nas kontaktiraj direktno preko sporočila.</p>
-
             <div class="filters">
                 <button class="filter-btn active" onclick="filterItems('vse', event)">VSI IZDELKI</button>
                 <button class="filter-btn" onclick="filterItems('metabolizem', event)">METABOLIZEM</button>
@@ -614,11 +535,7 @@
                 <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
             </div>
         </section>
-
-        <!-- Product Grid -->
         <div class="grid" id="product-grid"></div>
-
-        <!-- Dedicated Reviews Section -->
         <section class="reviews-section" id="reviews-container">
             <div class="reviews-header">
                 <h2>Mnenja Uporabnikov</h2>
@@ -629,13 +546,10 @@
             </div>
             <div class="grid" id="reviews-grid"></div>
         </section>
-
         <footer>
             <p>© MIA PEPTIDES. ALL PRODUCTS ARE INTENDED STRICTLY FOR RESEARCH PURPOSES ONLY.</p>
         </footer>
     </div>
-
-    <!-- Modal za opis -->
     <div class="modal" id="details-modal">
         <div class="modal-box">
             <button class="close-btn" onclick="closeModal()">✕</button>
@@ -643,37 +557,27 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="javascript:void(0)" onclick="openFacebookLink(event)" class="modal-fb-btn">
+            <a href="https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/" class="modal-fb-btn" onclick="openFacebookLink(event)">
                 📩 Pošlji Sporočilo za Naročilo
             </a>
         </div>
     </div>
-
     <script>
-        const FB_SHARE_URL = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+        const FB_PROFILE_WEB = "https://www.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/";
+        const FB_PROFILE_MOBILE = "https://m.facebook.com/people/Mia-Mlakar/pfbid02zNGbnspKdKs6YvVRYZH4ywyyZmFseACtfG4KzJQraRVA1aX1ywPTpG2bRujeNQt3l/";
+
+        function isFacebookInApp() {
+            const ua = navigator.userAgent || "";
+            return /FBAN|FBAV|FB_IAB|FBIOS|FB4A|FBSS|Instagram/i.test(ua);
+        }
 
         function openFacebookLink(e) {
             if (e) e.preventDefault();
-
-            const ua = navigator.userAgent || navigator.vendor || window.opera;
-            const isFBInApp = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
-
-            if (isFBInApp) {
-                // Če je uporabnik v Facebook aplikaciji, odpremo povezavo prek intenta/download poskusa, 
-                // kar prisili Facebook, da povezavo odpre v sistemskem brskalniku (Safari/Chrome).
-                if (/Android/i.test(ua)) {
-                    window.location.href = "intent://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr#Intent;scheme=https;package=com.android.chrome;end";
-                } else {
-                    // Za iOS / iPhone v Facebook aplikaciji
-                    window.location.href = FB_SHARE_URL + "&download=true";
-                    setTimeout(function() {
-                        window.location.href = FB_SHARE_URL;
-                    }, 300);
-                }
-            } else {
-                // Za običajne brskalnike
-                window.location.href = FB_SHARE_URL;
+            if (isFacebookInApp()) {
+                window.location.href = FB_PROFILE_MOBILE;
+                return;
             }
+            window.location.href = FB_PROFILE_WEB;
         }
 
         const catalog = [
@@ -735,7 +639,7 @@
                 emoji: '👑',
                 tag: 'PREMIUM COMPLEX',
                 short: 'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.',
-                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične strukture.'
+                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične structures.'
             },
             {
                 id: 'semax-5mg',
@@ -774,7 +678,6 @@
                 full: 'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz.'
             }
         ];
-
         const reviews = [
             {
                 name: "Rok Novak",
@@ -819,7 +722,6 @@
                 text: "Super barva že po dveh izpostavljanjih soncu! Dajem 4 zvezdice, ker sem na začetku imela malo lahke slabosti, ampak je hitro minilo."
             }
         ];
-
         function render(items) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = items.map(p => `
@@ -836,13 +738,12 @@
                         <p class="card-desc">${p.short}</p>
                         <div class="card-footer">
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
-                            <a href="javascript:void(0)" onclick="openFacebookLink(event)" class="btn-order">💬 Naroči na FB</a>
+                            <a href="${FB_PROFILE_WEB}" onclick="openFacebookLink(event)" class="btn-order">💬 Naroči na FB</a>
                         </div>
                     </div>
                 </div>
             `).join('');
         }
-
         function renderReviews() {
             const rGrid = document.getElementById('reviews-grid');
             rGrid.innerHTML = reviews.map(r => {
@@ -865,42 +766,33 @@
                 `;
             }).join('');
         }
-
         function filterItems(cat, e) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
-
             if(cat === 'vse') {
                 render(catalog);
             } else {
                 render(catalog.filter(x => x.category === cat));
             }
         }
-
         function scrollToReviews() {
             const el = document.getElementById('reviews-container');
             if(el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
         }
-
         function openModal(id) {
             const p = catalog.find(x => x.id === id);
             if(!p) return;
-
             document.getElementById('m-cat').innerText = p.catLabel;
             document.getElementById('m-title').innerText = p.name;
             document.getElementById('m-sub').innerText = p.sub;
             document.getElementById('m-text').innerText = p.full;
-
             document.getElementById('details-modal').classList.add('active');
         }
-
         function closeModal() {
             document.getElementById('details-modal').classList.remove('active');
         }
-
-        // Init
         render(catalog);
         renderReviews();
     </script>
