@@ -1,4 +1,3 @@
-<!-- language: HTML/CSS/JS, file: index.html, target: Modern Browsers -->
 <!DOCTYPE html>
 <html lang="sl">
 <head>
@@ -17,6 +16,7 @@
             --accent-purple: #b224ef;
             --accent-pink: #ff0844;
             --accent-emerald: #00f5a0;
+            --accent-gold: #ffb703;
             --text-main: #ffffff;
             --text-sub: #94a3b8;
             
@@ -193,7 +193,7 @@
             box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35);
         }
 
-        /* High-Impact Visual Banner (Absence of flat images) */
+        /* High-Impact Visual Banner */
         .card-visual {
             height: 180px;
             width: 100%;
@@ -219,13 +219,15 @@
             opacity: 0.95;
         }
 
-        /* Custom Visual Gradients for categories */
+        /* Custom Visual Gradients */
         .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
         .v-bpc { background: radial-gradient(circle, #00f5a0 0%, #00d2ff 50%, #000 100%); }
         .v-semax { background: radial-gradient(circle, #b224ef 0%, #7579ff 50%, #000 100%); }
         .v-selank { background: radial-gradient(circle, #ff0844 0%, #ffb199 50%, #000 100%); }
         .v-ghk { background: radial-gradient(circle, #00c6ff 0%, #0072ff 50%, #000 100%); }
         .v-mt1 { background: radial-gradient(circle, #f857a6 0%, #ff5858 50%, #000 100%); }
+        .v-cjc { background: radial-gradient(circle, #ffb703 0%, #fb8500 50%, #000 100%); }
+        .v-klow { background: radial-gradient(circle, #a855f7 0%, #ec4899 50%, #000 100%); }
 
         .visual-symbol {
             position: relative;
@@ -461,6 +463,7 @@
                 <button class="filter-btn active" onclick="filterItems('vse', event)">VSI IZDELKI</button>
                 <button class="filter-btn" onclick="filterItems('metabolizem', event)">METABOLIZEM</button>
                 <button class="filter-btn" onclick="filterItems('obnova', event)">OBNOVA TKIV</button>
+                <button class="filter-btn" onclick="filterItems('rast', event)">RASTNI HORMON</button>
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
             </div>
@@ -488,76 +491,100 @@
 
         const catalog = [
             {
-                id: 'retatrutide',
-                name: 'Retatrutide',
+                id: 'retatrutide-20mg',
+                name: 'Retatrutide (20mg)',
                 sub: 'Triple Agonist (GLP-1 / GIP / Glucagon)',
                 category: 'metabolizem',
                 catLabel: 'Metabolizem & Oksidacija',
                 glowClass: 'v-retatrutide',
                 emoji: '⚡',
-                tag: '99.8% PURITY',
+                tag: '20MG HIGH DOSE',
                 short: 'Najnovejša in najmočnejša formula za regulacijo apetita ter pospešeno oksidacijo maščob.',
-                full: 'Retatrutide je trenutno najbolj napredna spojina v presnovni znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje ne le drastično zmanjšuje lakoto, temveč direktno spodbuja telo k porabi maščobnih zalog kot primarnega vir energijskega goriva.'
+                full: 'Retatrutide (20mg) je vrhunec presnovne znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje drastično zmanjšuje lakoto ter neposredno spodbuja porabo maščobnih zalog za energijo.'
             },
             {
-                id: 'bpc157-tb500',
-                name: 'BPC-157 + TB-500',
-                sub: 'Regenerativna Matrix Formula',
+                id: 'bpc-tb-blend',
+                name: 'BPC-157 (5mg) + TB-500 (5mg)',
+                sub: 'Ultimate Recovery Blend (10mg Total)',
                 category: 'obnova',
                 catLabel: 'Obnova Kit & Sklepov',
                 glowClass: 'v-bpc',
                 emoji: '🧬',
-                tag: 'RECOVERY STACK',
-                short: 'Zlati standard za celjenje kit, vezi, mišic ter hitro odpravljanje vnetij v telesu.',
-                full: 'Popolna sinergijska kombinacija dveh regenerativnih peptidov. BPC-157 lokalno stimulira tvorbo novih žil in hitro celi poškodbe kit ter sluznice, TB-500 pa sistemsko pospešuje gibljivost celic in obnovo celotnega aparata.'
+                tag: 'DUAL STACK',
+                short: 'Popolna sinergija za celično obnovo kit, vezi, sklepov in odpravljanje mikrovnetij.',
+                full: 'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovo tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.'
             },
             {
-                id: 'semax',
-                name: 'Semax',
+                id: 'cjc-ipamorelin',
+                name: 'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)',
+                sub: 'Synergistic GH Secretagogue Blend',
+                category: 'rast',
+                catLabel: 'Rastni Hormon & Vitalnost',
+                glowClass: 'v-cjc',
+                emoji: '🔥',
+                tag: 'GH POWER STACK',
+                short: 'Izjemna sinergija za naraven in močan dvig lastnega rastnega hormona ter hitrejšo obnovo.',
+                full: 'Udarne naravne sekrecijske spojine! CJC-1295 no DAC in Ipamorelin delujeta z roko v roki za sproščanje čistih pulzov rastnega hormona brez dviga kortizola ali prolaktina. Idealno za izgubo maščobe, čisto mišično maso in opazno regeneracijo.'
+            },
+            {
+                id: 'ghkcu-100mg',
+                name: 'GHK-Cu (100mg)',
+                sub: 'Bakrov Tripeptid-1 High-Potency',
+                category: 'lepota',
+                catLabel: 'Koža & Estetika',
+                glowClass: 'v-ghk',
+                emoji: '✨',
+                tag: '100MG MEGA DOSE',
+                short: 'Zlati standard za sintezo kolagena, regeneracijo kože, zmanjšanje gub in rast las.',
+                full: 'GHK-Cu (100mg) v visoki koncentraciji deluje kot močan regenerator DNK in tkiv. Spodbuja naravno proizvodnjo kolagena, elastina ter hialuronske kisline, obenem pa močno stimulira lasne mešičke za gostejše lase.'
+            },
+            {
+                id: 'klow-80mg',
+                name: 'KLOW (80mg)',
+                sub: 'Ultra Complex Beauty Blend',
+                category: 'lepota',
+                catLabel: 'Koža & Estetika',
+                glowClass: 'v-klow',
+                emoji: '👑',
+                tag: 'PREMIUM COMPLEX',
+                short: 'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.',
+                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovo celične strukture.'
+            },
+            {
+                id: 'semax-5mg',
+                name: 'Semax (5mg)',
                 sub: 'Kognitivni Heptapeptid',
                 category: 'možgani',
                 catLabel: 'Fokus & Spomin',
                 glowClass: 'v-semax',
                 emoji: '🧠',
                 tag: 'BDNF BOOST',
-                short: 'Močan nootropik za dvig BDNF, večji fokus, jasnost misli in zaščito živčevja.',
-                full: 'Semax je bil razvit za opazno izboljšanje delovanja osrednjega živčnega sistema. Diguje raven BDNF (možganskega trofničnega faktorja), kar prinaša izjemno mentalno jasnost, hitro učenje in dolgotrajen fokus brez nemira ali kofeinskega padca.'
+                short: 'Nootropna formula za kognitivni dvig, jasnost misli, koncentracijo in nevrozaščito.',
+                full: 'Semax (5mg) drastično dvigne raven BDNF (možganskega trofničnega faktorja) v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.'
             },
             {
-                id: 'selank',
-                name: 'Selank',
+                id: 'selank-10mg',
+                name: 'Selank (10mg)',
                 sub: 'Anksiolitični Peptid',
                 category: 'možgani',
                 catLabel: 'Fokus & Spomin',
                 glowClass: 'v-selank',
                 emoji: '🛡️',
                 tag: 'STRESS RELIEF',
-                short: 'Odstranjuje stres in tesnobo brez sedacije ter omogoča miren in jasen um.',
-                full: 'Selank deluje kot stabilizator živčnega sistema preko modulacije GABA receptorjev. Učinkovito zmanjšuje anksioznost, mentalni pritisk in stres, medtem ko ohranja popolno budnost, ostro razmišljanje in umirjenost.'
-            },
-            {
-                id: 'ghkcu',
-                name: 'GHK-Cu',
-                sub: 'Bakrov Tripeptid-1',
-                category: 'lepota',
-                catLabel: 'Koža & Estetika',
-                glowClass: 'v-ghk',
-                emoji: '✨',
-                tag: 'COLLAGEN BUILDER',
-                short: 'Spodbuja kolagen, obnavlja strukturo kože, zgladi gubice in pospešuje rast las.',
-                full: 'GHK-Cu je vodilni peptid na področju dermatološke regeneracije. Vpliva na izražanje tisočih genov, spodbuja naravno sintezo kolagena ter elastina, obnavlja elastičnost kože in stimulira lasne mešičke.'
+                short: 'Učinkovito zmanjšuje stres in tesnobo ter omogoča miren um brez utrujenosti.',
+                full: 'Selank (10mg) je peptidna podpora za živčni sistem. Regulates GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost, obenem pa ohranja popolno budnost in bister um.'
             },
             {
                 id: 'mt1',
-                name: 'Melanotan-1',
+                name: 'Melanotan-1 (MT-1)',
                 sub: 'Selektivni Melanin Agonist',
                 category: 'lepota',
                 catLabel: 'Koža & Estetika',
                 glowClass: 'v-mt1',
                 emoji: '☀️',
                 tag: 'TAN & PROTECT',
-                short: 'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo UV žarkom.',
-                full: 'Melanotan-1 je selektivni agonist MC1R receptorjev. Spodbuja melanocite k tvorbi temnega pigmenta (eumelanina), kar omogoča čudovito in enakomerno porjavelost kože brez pretiranega in škodljivega cvrtja na soncu.'
+                short: 'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo soncu ali solariju.',
+                full: 'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz kože brez nepotrebnega tveganja za opekline.'
             }
         ];
 
