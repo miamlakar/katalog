@@ -595,7 +595,7 @@
             <div class="logo">
                 MIA PEPTIDES <span class="logo-badge">VERIFIED</span>
             </div>
-            <a onclick="openFacebookLink()" class="fb-btn-header">
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" onclick="openFacebookLink(event)" class="fb-btn-header">
                 💬 Kontaktiraj na Facebooku
             </a>
         </header>
@@ -643,18 +643,26 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a onclick="openFacebookLink()" class="modal-fb-btn">
+            <a href="https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" onclick="openFacebookLink(event)" class="modal-fb-btn">
                 📩 Pošlji Sporočilo za Naročilo
             </a>
         </div>
     </div>
 
     <script>
-        const FB_WEB_LINK = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
+        const FB_SHARE_URL = "https://www.facebook.com/share/19PEtnJZX6/?mibextid=wwXIfr";
 
-        function openFacebookLink() {
-            // Preusmeritev, ki pravilno deluje tudi znotraj Facebook vgrajenega brskalnika
-            window.location.href = FB_WEB_LINK;
+        function openFacebookLink(e) {
+            if (e) e.preventDefault();
+
+            const isFBInApp = /FBAN|FBAV/i.test(navigator.userAgent);
+
+            if (isFBInApp) {
+                // Prepreči "Page Not Found" napako v vgrajenem brskalniku s preusmeritvijo preko okna
+                window.open(FB_SHARE_URL, '_blank', 'noopener,noreferrer');
+            } else {
+                window.location.href = FB_SHARE_URL;
+            }
         }
 
         const catalog = [
@@ -716,7 +724,7 @@
                 emoji: '👑',
                 tag: 'PREMIUM COMPLEX',
                 short: 'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.',
-                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične strukture.'
+                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične structures.'
             },
             {
                 id: 'semax-5mg',
@@ -817,7 +825,7 @@
                         <p class="card-desc">${p.short}</p>
                         <div class="card-footer">
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
-                            <a onclick="openFacebookLink()" class="btn-order">💬 Naroči na FB</a>
+                            <a href="${FB_SHARE_URL}" target="_blank" rel="noopener noreferrer" onclick="openFacebookLink(event)" class="btn-order">💬 Naroči na FB</a>
                         </div>
                     </div>
                 </div>
