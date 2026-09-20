@@ -61,6 +61,34 @@
         .filter-btn.reviews-tab.active, .filter-btn.reviews-tab:hover { background: linear-gradient(135deg, var(--accent-gold), #fb8500); color: #000; box-shadow: 0 0 25px rgba(255, 183, 3, 0.6); }
         .filter-btn.lab-tab { background: rgba(0, 245, 160, 0.1); border-color: rgba(0, 245, 160, 0.4); color: var(--accent-emerald); }
         .filter-btn.lab-tab.active, .filter-btn.lab-tab:hover { background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan)); color: #000; box-shadow: 0 0 25px rgba(0, 245, 160, 0.55); }
+        .filter-btn.howto-tab { background: rgba(178, 36, 239, 0.12); border-color: rgba(178, 36, 239, 0.45); color: #e9b3ff; }
+        .filter-btn.howto-tab.active, .filter-btn.howto-tab:hover { background: linear-gradient(135deg, #b224ef, #4facfe); color: #fff; box-shadow: 0 0 25px rgba(178, 36, 239, 0.6); }
+        .howto-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .howto-head { text-align: center; margin-bottom: 36px; }
+        .howto-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 10%, #e9b3ff 50%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .howto-head p { color: var(--text-sub); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+        .howto-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .howto-step { background: var(--card-bg); border: 1px solid rgba(178, 36, 239, 0.22); border-radius: 24px; padding: 28px 24px 24px; backdrop-filter: blur(16px); display: flex; flex-direction: column; gap: 12px; animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.4s ease; min-height: 280px; }
+        .howto-step:hover { transform: translateY(-8px); border-color: rgba(178, 36, 239, 0.7); box-shadow: 0 16px 40px -12px rgba(178, 36, 239, 0.4); }
+        .howto-step.s2 { border-color: rgba(79, 172, 254, 0.28); }
+        .howto-step.s2:hover { border-color: rgba(0, 242, 254, 0.7); box-shadow: 0 16px 40px -12px rgba(0, 242, 254, 0.35); }
+        .howto-step.s3 { border-color: rgba(0, 245, 160, 0.28); }
+        .howto-step.s3:hover { border-color: rgba(0, 245, 160, 0.7); box-shadow: 0 16px 40px -12px rgba(0, 245, 160, 0.35); }
+        .step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; width: 52px; height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px; }
+        .s1 .step-num { color: #e9b3ff; background: rgba(178, 36, 239, 0.15); border: 1px solid rgba(178, 36, 239, 0.45); box-shadow: 0 0 18px rgba(178, 36, 239, 0.35); animation: purplePulse 2.4s ease-in-out infinite; }
+        .s2 .step-num { color: #9be7ff; background: rgba(79, 172, 254, 0.15); border: 1px solid rgba(79, 172, 254, 0.45); box-shadow: 0 0 18px rgba(79, 172, 254, 0.35); animation: msgGlow 2.4s ease-in-out infinite; }
+        .s3 .step-num { color: #b9f6ca; background: rgba(0, 245, 160, 0.12); border: 1px solid rgba(0, 245, 160, 0.45); box-shadow: 0 0 18px rgba(0, 245, 160, 0.35); animation: waTextGlow 2.4s ease-in-out infinite; }
+        @keyframes purplePulse { 0%, 100% { box-shadow: 0 0 12px rgba(178, 36, 239, 0.3); } 50% { box-shadow: 0 0 24px rgba(178, 36, 239, 0.7); } }
+        .howto-step h3 { font-size: 1.35rem; font-weight: 800; color: #fff; }
+        .howto-step p { color: var(--text-sub); font-size: 0.95rem; line-height: 1.55; flex-grow: 1; }
+        .howto-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+        .howto-btn { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 16px; border-radius: 14px; font-weight: 800; font-size: 0.82rem; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; touch-action: manipulation; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .howto-btn:hover { transform: translateY(-2px) scale(1.02); }
+        .howto-btn.catalog { background: linear-gradient(135deg, #b224ef, #4facfe); color: #fff; box-shadow: 0 0 18px rgba(178, 36, 239, 0.45); animation: orderGlow 2s ease-in-out infinite; }
+        .howto-btn.wa { background: linear-gradient(135deg, #25d366 0%, #1ebe5d 55%, #b9f6ca 100%); color: #06210f; box-shadow: 0 0 16px rgba(37, 211, 102, 0.5); animation: waGlow 2.6s ease-in-out infinite; }
+        .howto-btn.msg { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 55%, #a5f3fc 100%); color: #041018; box-shadow: 0 0 16px rgba(79, 172, 254, 0.5); animation: skyGlow 2.6s ease-in-out infinite; }
+        .howto-note { font-size: 0.78rem; color: #86efac; font-weight: 600; letter-spacing: 0.4px; }
+        @media (max-width: 900px) { .howto-steps { grid-template-columns: 1fr; } .howto-step { min-height: auto; } }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
         .card { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; overflow: hidden; backdrop-filter: blur(16px); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; display: flex; flex-direction: column; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .card:hover { transform: translateY(-8px); border-color: var(--accent-cyan); box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35); }
@@ -87,9 +115,9 @@
         .btn-details { flex: 1; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 12px; border-radius: 14px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease; }
         .btn-details:hover { background: rgba(255, 255, 255, 0.18); }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(22px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        .btn-test { display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 10px; min-height: 44px; background: rgba(0, 245, 160, 0.08); border: 1px solid rgba(0, 245, 160, 0.35); color: var(--accent-emerald); padding: 10px; border-radius: 14px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: rgba(0, 245, 160, 0.25); position: relative; z-index: 6; pointer-events: auto; }
+        .btn-test { display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 10px; min-height: 44px; background: rgba(0, 245, 160, 0.08); border: 1px solid rgba(0, 245, 160, 0.35); color: var(--accent-emerald); padding: 10px; border-radius: 14px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; cursor: pointer; touch-action: manipulation; position: relative; z-index: 6; pointer-events: auto; }
         .btn-test:hover { background: rgba(0, 245, 160, 0.18); box-shadow: 0 0 18px rgba(0, 245, 160, 0.35); }
-        .lab-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid rgba(0, 245, 160, 0.2); border-radius: 24px; padding: 26px; backdrop-filter: blur(16px); cursor: pointer; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; touch-action: manipulation; -webkit-tap-highlight-color: rgba(0, 245, 160, 0.25); position: relative; z-index: 6; pointer-events: auto; }
+        .lab-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid rgba(0, 245, 160, 0.2); border-radius: 24px; padding: 26px; backdrop-filter: blur(16px); cursor: pointer; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; touch-action: manipulation; position: relative; z-index: 6; pointer-events: auto; }
         .lab-card:hover { transform: translateY(-8px); border-color: var(--accent-emerald); box-shadow: 0 15px 35px -10px rgba(0, 245, 160, 0.35); }
         .lab-badge { align-self: flex-start; background: rgba(0, 245, 160, 0.12); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 1.4px; padding: 4px 10px; border-radius: 12px; font-weight: 700; }
         .lab-card h3 { font-size: 1.35rem; font-weight: 800; color: #fff; }
@@ -149,6 +177,7 @@
                 <button class="filter-btn" onclick="filterItems('rast', event)">RASTNI HORMON</button>
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
+                <button class="filter-btn howto-tab" onclick="showHowTo(event)">KAKO NAROČITI</button>
                 <button class="filter-btn lab-tab" onclick="showLabTests(event)">LABORATORIJSKI TESTI</button>
                 <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
             </div>
@@ -176,6 +205,7 @@
     </div>
     <script>
         const FB_CHAT = "https://m.me/miamlakarr";
+        const WA_CHAT = "https://wa.me/message/TRV4OCQQ3FDYD1";
         let currentProductName = "";
         function openMessenger(e, productName) {
             if (e) { e.preventDefault(); e.stopPropagation(); }
@@ -192,6 +222,14 @@
                 if (window.top && window.top !== window) window.top.location.href = url;
                 else window.location.assign(url);
             } catch (err) { window.location.href = url; }
+            return false;
+        }
+        function openWhatsApp(e) {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            try {
+                if (window.top && window.top !== window) window.top.location.href = WA_CHAT;
+                else window.location.assign(WA_CHAT);
+            } catch (err) { window.location.href = WA_CHAT; }
             return false;
         }
         const catalog = [
@@ -241,6 +279,43 @@
                     <span class="lab-card-cta">Poglej test →</span>
                 </a>`).join('');
             grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function showHowTo(e) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (e && e.target) e.target.classList.add('active');
+            document.getElementById('product-grid').innerHTML = `
+                <div class="howto-panel">
+                    <div class="howto-head"><h2>Kako naročiti</h2><p>Trije koraki. Brez košarice, brez registracije — samo sporočilo.</p></div>
+                    <div class="howto-steps">
+                        <div class="howto-step s1" style="animation-delay:0.05s">
+                            <div class="step-num">01</div>
+                            <h3>Izberi izdelek</h3>
+                            <p>Odpri katalog, poglej opis in laboratorijski test. Ko veš kaj želiš, pojdi na korak 2.</p>
+                            <div class="howto-actions"><button class="howto-btn catalog" onclick="goToCatalog()">Poglej katalog</button></div>
+                        </div>
+                        <div class="howto-step s2" style="animation-delay:0.14s">
+                            <div class="step-num">02</div>
+                            <h3>Piši nam</h3>
+                            <p>Napiši ime izdelka. Odpre se direktni chat — izberi kanal, ki ti bolj paše.</p>
+                            <div class="howto-actions">
+                                <a href="${WA_CHAT}" class="howto-btn wa" onclick="return openWhatsApp(event)">WhatsApp</a>
+                                <a href="${FB_CHAT}" class="howto-btn msg" onclick="return openMessenger(event)">Messenger</a>
+                            </div>
+                        </div>
+                        <div class="howto-step s3" style="animation-delay:0.23s">
+                            <div class="step-num">03</div>
+                            <h3>Plačilo + pošiljanje</h3>
+                            <p>Plačilo dogovorimo v sporočilu. Paket gre preko <strong style="color:#b9f6ca">Pošte Slovenije</strong>.</p>
+                            <div class="howto-note">Pošiljanje po Sloveniji · hitra odprema po potrditvi</div>
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function goToCatalog() {
+            const btn = document.querySelector('.filters .filter-btn');
+            filterItems('vse', { target: btn });
+            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         function renderReviews() {
             document.getElementById('reviews-grid').innerHTML = reviews.map(r => {
