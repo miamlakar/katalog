@@ -20,272 +20,53 @@
             --text-main: #ffffff;
             --text-sub: #94a3b8;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
         body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            min-height: 100vh;
-            padding-bottom: 40px;
-            overflow-x: hidden;
+            background-color: var(--bg); color: var(--text-main); min-height: 100vh; padding-bottom: 40px; overflow-x: hidden;
             background-image:
                 radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 90% 50%, rgba(178, 36, 239, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 50% 90%, rgba(0, 245, 160, 0.1) 0%, transparent 40%);
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .top-notice {
-            background: linear-gradient(90deg, rgba(0, 242, 254, 0.2), rgba(178, 36, 239, 0.3), rgba(0, 242, 254, 0.2));
-            border-bottom: 1px solid rgba(0, 242, 254, 0.3);
-            text-align: center;
-            padding: 10px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #fff;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            background: linear-gradient(90deg, rgba(0, 242, 254, 0.18), rgba(37, 211, 102, 0.14), rgba(178, 36, 239, 0.22), rgba(0, 242, 254, 0.18));
+            border-bottom: 1px solid rgba(0, 242, 254, 0.3); text-align: center; padding: 10px; font-size: 0.82rem;
+            font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase;
+            display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;
         }
-        .research-badge {
-            background: rgba(255, 8, 68, 0.2);
-            border: 1px solid var(--accent-pink);
-            color: #ff6b8b;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.72rem;
-            letter-spacing: 1.5px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 0;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff 30%, var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-badge {
-            background: rgba(0, 242, 254, 0.15);
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            font-size: 0.75rem;
-            padding: 3px 10px;
-            border-radius: 20px;
-            -webkit-text-fill-color: var(--accent-cyan);
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
-        }
-        .fb-btn-header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 55%, #a5f3fc 100%);
-            color: #041018;
-            padding: 13px 26px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.78rem;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            box-shadow:
-                0 0 16px rgba(79, 172, 254, 0.45),
-                0 0 32px rgba(0, 242, 254, 0.28),
-                inset 0 1px 0 rgba(255, 255, 255, 0.55);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            animation: skyGlow 2.6s ease-in-out infinite;
-        }
-        .fb-btn-header:hover {
-            transform: translateY(-2px) scale(1.03);
-            box-shadow:
-                0 0 24px rgba(79, 172, 254, 0.7),
-                0 0 44px rgba(0, 242, 254, 0.45),
-                inset 0 1px 0 rgba(255, 255, 255, 0.7);
-        }
-        @keyframes skyGlow {
-            0%, 100% {
-                box-shadow:
-                    0 0 14px rgba(79, 172, 254, 0.4),
-                    0 0 28px rgba(0, 242, 254, 0.22),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                box-shadow:
-                    0 0 22px rgba(79, 172, 254, 0.65),
-                    0 0 40px rgba(0, 242, 254, 0.38),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-            }
-        }
-        .wa-btn-header {
-            background: linear-gradient(135deg, #25d366 0%, #1ebe5d 55%, #b9f6ca 100%);
-            color: #06210f;
-            padding: 13px 26px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.78rem;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            box-shadow:
-                0 0 16px rgba(37, 211, 102, 0.5),
-                0 0 32px rgba(18, 140, 126, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.55);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            animation: waGlow 2.6s ease-in-out infinite;
-        }
-        .wa-btn-header:hover {
-            transform: translateY(-2px) scale(1.03);
-            box-shadow:
-                0 0 24px rgba(37, 211, 102, 0.8),
-                0 0 44px rgba(18, 140, 126, 0.45),
-                inset 0 1px 0 rgba(255, 255, 255, 0.7);
-        }
-        @keyframes waGlow {
-            0%, 100% {
-                box-shadow:
-                    0 0 14px rgba(37, 211, 102, 0.45),
-                    0 0 28px rgba(18, 140, 126, 0.22),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                box-shadow:
-                    0 0 22px rgba(37, 211, 102, 0.75),
-                    0 0 40px rgba(18, 140, 126, 0.4),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-            }
-        }
-        .hero {
-            text-align: center;
-            padding: 40px 0 20px;
-        }
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, var(--accent-cyan) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
-        }
-        .hero p {
-            color: var(--text-sub);
-            font-size: 1.15rem;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-        .filters {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-sub);
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.88rem;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #000;
-            border-color: transparent;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
-            font-weight: 800;
-        }
-        .filter-btn.reviews-tab {
-            background: rgba(255, 183, 3, 0.1);
-            border-color: rgba(255, 183, 3, 0.4);
-            color: var(--accent-gold);
-        }
-        .filter-btn.reviews-tab.active, .filter-btn.reviews-tab:hover {
-            background: linear-gradient(135deg, var(--accent-gold), #fb8500);
-            color: #000;
-            box-shadow: 0 0 25px rgba(255, 183, 3, 0.6);
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            overflow: hidden;
-            backdrop-filter: blur(16px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35);
-        }
-        .card-visual {
-            height: 180px;
-            width: 100%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: #000;
-        }
-        .visual-glow {
-            position: absolute;
-            width: 120%;
-            height: 120%;
-            opacity: 0.7;
-            filter: blur(30px);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-        .card:hover .visual-glow {
-            transform: scale(1.2);
-            opacity: 0.95;
-        }
+        .glow-msg { color: #9be7ff; font-weight: 800; letter-spacing: 1.4px; text-shadow: 0 0 8px rgba(79, 172, 254, 0.95), 0 0 18px rgba(0, 242, 254, 0.7); animation: msgGlow 2.4s ease-in-out infinite; }
+        .glow-wa { color: #b9f6ca; font-weight: 800; letter-spacing: 1.4px; text-shadow: 0 0 8px rgba(37, 211, 102, 0.95), 0 0 18px rgba(37, 211, 102, 0.65); animation: waTextGlow 2.4s ease-in-out infinite; }
+        @keyframes msgGlow { 0%, 100% { text-shadow: 0 0 8px rgba(79, 172, 254, 0.8), 0 0 16px rgba(0, 242, 254, 0.45); } 50% { text-shadow: 0 0 12px rgba(79, 172, 254, 1), 0 0 26px rgba(0, 242, 254, 0.8); } }
+        @keyframes waTextGlow { 0%, 100% { text-shadow: 0 0 8px rgba(37, 211, 102, 0.8), 0 0 16px rgba(37, 211, 102, 0.4); } 50% { text-shadow: 0 0 12px rgba(37, 211, 102, 1), 0 0 26px rgba(37, 211, 102, 0.75); } }
+        .research-badge { background: rgba(255, 8, 68, 0.2); border: 1px solid var(--accent-pink); color: #ff6b8b; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; letter-spacing: 1.5px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 0; gap: 16px; flex-wrap: wrap; }
+        .header-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; background: linear-gradient(135deg, #fff 30%, var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; align-items: center; gap: 10px; }
+        .logo-badge { background: rgba(0, 242, 254, 0.15); border: 1px solid var(--accent-cyan); color: var(--accent-cyan); font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; -webkit-text-fill-color: var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
+        .fb-btn-header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 55%, #a5f3fc 100%); color: #041018; padding: 13px 26px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 0.78rem; letter-spacing: 1.8px; text-transform: uppercase; box-shadow: 0 0 16px rgba(79, 172, 254, 0.45), 0 0 32px rgba(0, 242, 254, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.55); transition: all 0.3s ease; display: flex; align-items: center; cursor: pointer; animation: skyGlow 2.6s ease-in-out infinite; }
+        .fb-btn-header:hover { transform: translateY(-2px) scale(1.03); }
+        @keyframes skyGlow { 0%, 100% { box-shadow: 0 0 14px rgba(79, 172, 254, 0.4), 0 0 28px rgba(0, 242, 254, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); } 50% { box-shadow: 0 0 22px rgba(79, 172, 254, 0.65), 0 0 40px rgba(0, 242, 254, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.7); } }
+        .wa-btn-header { background: linear-gradient(135deg, #25d366 0%, #1ebe5d 55%, #b9f6ca 100%); color: #06210f; padding: 13px 26px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 0.78rem; letter-spacing: 1.8px; text-transform: uppercase; box-shadow: 0 0 16px rgba(37, 211, 102, 0.5), 0 0 32px rgba(18, 140, 126, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.55); transition: all 0.3s ease; display: flex; align-items: center; cursor: pointer; animation: waGlow 2.6s ease-in-out infinite; }
+        .wa-btn-header:hover { transform: translateY(-2px) scale(1.03); }
+        @keyframes waGlow { 0%, 100% { box-shadow: 0 0 14px rgba(37, 211, 102, 0.45), 0 0 28px rgba(18, 140, 126, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); } 50% { box-shadow: 0 0 22px rgba(37, 211, 102, 0.75), 0 0 40px rgba(18, 140, 126, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7); } }
+        .hero { text-align: center; padding: 40px 0 20px; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 15px; background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, var(--accent-cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-sub); font-size: 1.15rem; max-width: 650px; margin: 0 auto; }
+        .filters { display: flex; justify-content: center; gap: 12px; margin: 40px 0; flex-wrap: wrap; }
+        .filter-btn { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-sub); padding: 10px 22px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; cursor: pointer; backdrop-filter: blur(10px); transition: all 0.3s ease; }
+        .filter-btn.active, .filter-btn:hover { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); color: #000; border-color: transparent; box-shadow: 0 0 25px rgba(0, 242, 254, 0.5); font-weight: 800; }
+        .filter-btn.reviews-tab { background: rgba(255, 183, 3, 0.1); border-color: rgba(255, 183, 3, 0.4); color: var(--accent-gold); }
+        .filter-btn.reviews-tab.active, .filter-btn.reviews-tab:hover { background: linear-gradient(135deg, var(--accent-gold), #fb8500); color: #000; box-shadow: 0 0 25px rgba(255, 183, 3, 0.6); }
+        .filter-btn.lab-tab { background: rgba(0, 245, 160, 0.1); border-color: rgba(0, 245, 160, 0.4); color: var(--accent-emerald); }
+        .filter-btn.lab-tab.active, .filter-btn.lab-tab:hover { background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan)); color: #000; box-shadow: 0 0 25px rgba(0, 245, 160, 0.55); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; overflow: hidden; backdrop-filter: blur(16px); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; display: flex; flex-direction: column; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent-cyan); box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35); }
+        .card-visual { height: 180px; width: 100%; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #000; }
+        .visual-glow { position: absolute; width: 120%; height: 120%; opacity: 0.7; filter: blur(30px); transition: transform 0.5s ease, opacity 0.5s ease; }
+        .card:hover .visual-glow { transform: scale(1.2); opacity: 0.95; }
         .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
         .v-bpc { background: radial-gradient(circle, #00f5a0 0%, #00d2ff 50%, #000 100%); }
         .v-semax { background: radial-gradient(circle, #b224ef 0%, #7579ff 50%, #000 100%); }
@@ -294,331 +75,68 @@
         .v-mt1 { background: radial-gradient(circle, #f857a6 0%, #ff5858 50%, #000 100%); }
         .v-cjc { background: radial-gradient(circle, #ffb703 0%, #fb8500 50%, #000 100%); }
         .v-klow { background: radial-gradient(circle, #a855f7 0%, #ec4899 50%, #000 100%); }
-        .visual-symbol {
-            position: relative;
-            z-index: 2;
-            font-size: 3.5rem;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
-            transition: transform 0.3s ease;
-        }
-        .card:hover .visual-symbol {
-            transform: scale(1.15) rotate(3deg);
-        }
-        .visual-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 3;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-            letter-spacing: 1px;
-        }
-        .card-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        .card-cat {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent-cyan);
-            margin-bottom: 6px;
-        }
-        .card-title {
-            font-size: 1.45rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-        .card-sub {
-            color: var(--text-sub);
-            font-size: 0.85rem;
-            margin-bottom: 14px;
-        }
-        .card-desc {
-            color: #cbd5e1;
-            font-size: 0.9rem;
-            line-height: 1.55;
-            margin-bottom: 22px;
-        }
-        .card-footer {
-            margin-top: auto;
-            display: flex;
-            gap: 10px;
-        }
-        .btn-details {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #fff;
-            padding: 12px;
-            border-radius: 14px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .btn-details:hover {
-            background: rgba(255, 255, 255, 0.18);
-        }
-        .btn-order {
-            flex: 1.2;
-            background: linear-gradient(135deg, #1877f2, #00f2fe);
-            color: #fff;
-            border: none;
-            padding: 12px;
-            border-radius: 14px;
-            font-weight: 800;
-            font-size: 0.88rem;
-            letter-spacing: 0.4px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            box-shadow: 0 0 18px rgba(24, 119, 242, 0.65), 0 0 32px rgba(0, 242, 254, 0.35);
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            animation: orderGlow 1.8s ease-in-out infinite;
-            text-transform: uppercase;
-        }
-        .btn-order:hover {
-            box-shadow: 0 0 32px rgba(24, 119, 242, 1), 0 0 50px rgba(0, 242, 254, 0.7);
-            transform: scale(1.05);
-        }
-        @keyframes orderGlow {
-            0%, 100% {
-                box-shadow: 0 0 14px rgba(24, 119, 242, 0.55), 0 0 28px rgba(0, 242, 254, 0.25);
-            }
-            50% {
-                box-shadow: 0 0 28px rgba(24, 119, 242, 0.95), 0 0 46px rgba(0, 242, 254, 0.55);
-            }
-        }
-        .reviews-section {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .reviews-header h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, var(--accent-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-        .reviews-summary {
-            font-size: 1.1rem;
-            color: var(--text-sub);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .stars-gold {
-            color: var(--accent-gold);
-            letter-spacing: 2px;
-        }
-        .review-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 183, 3, 0.15);
-            border-radius: 20px;
-            padding: 24px;
-            backdrop-filter: blur(12px);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .review-card:hover {
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 25px rgba(255, 183, 3, 0.2);
-        }
-        .review-user {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .user-avatar {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1rem;
-            color: #fff;
-        }
-        .user-name {
-            font-weight: 700;
-            font-size: 1rem;
-            color: #fff;
-        }
-        .user-verified {
-            font-size: 0.75rem;
-            color: var(--accent-emerald);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        .review-item-tag {
-            display: inline-block;
-            background: rgba(0, 242, 254, 0.1);
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            color: var(--accent-cyan);
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-            align-self: flex-start;
-            font-weight: 600;
-        }
-        .review-comment {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .modal {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(12px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            padding: 20px;
-        }
-        .modal.active {
-            display: flex;
-        }
-        .modal-box {
-            background: #0d121f;
-            border: 1px solid var(--accent-cyan);
-            box-shadow: 0 0 60px rgba(0, 242, 254, 0.3);
-            border-radius: 24px;
-            max-width: 580px;
-            width: 100%;
-            padding: 32px;
-            position: relative;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        .close-btn {
-            position: absolute;
-            top: 20px; right: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: #fff;
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-        .modal-cat {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 6px;
-        }
-        .modal-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-        .modal-sub {
-            color: var(--text-sub);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-        .modal-text {
-            color: #cbd5e1;
-            line-height: 1.65;
-            font-size: 0.98rem;
-            margin-bottom: 28px;
-        }
-        .modal-fb-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background: linear-gradient(135deg, #1877f2, #00f2fe);
-            color: #fff;
-            text-align: center;
-            padding: 16px;
-            border-radius: 16px;
-            font-weight: 800;
-            font-size: 1.05rem;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            text-transform: uppercase;
-            border: none;
-            box-shadow: 0 0 28px rgba(24, 119, 242, 0.7), 0 0 48px rgba(0, 242, 254, 0.4);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            animation: orderGlow 1.8s ease-in-out infinite;
-            position: relative;
-            z-index: 5;
-            pointer-events: auto;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .modal-fb-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 45px rgba(24, 119, 242, 1), 0 0 70px rgba(0, 242, 254, 0.75);
-        }
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-sub);
-            font-size: 0.8rem;
-        }
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2rem; }
-            header { flex-direction: column; gap: 15px; }
-        }
+        .visual-symbol { position: relative; z-index: 2; font-size: 3.5rem; filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)); transition: transform 0.3s ease; }
+        .card:hover .visual-symbol { transform: scale(1.15) rotate(3deg); }
+        .visual-tag { position: absolute; top: 15px; right: 15px; z-index: 3; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 4px 10px; border-radius: 12px; letter-spacing: 1px; }
+        .card-body { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-cat { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-cyan); margin-bottom: 6px; }
+        .card-title { font-size: 1.45rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+        .card-sub { color: var(--text-sub); font-size: 0.85rem; margin-bottom: 14px; }
+        .card-desc { color: #cbd5e1; font-size: 0.9rem; line-height: 1.55; margin-bottom: 22px; }
+        .card-footer { margin-top: auto; display: flex; gap: 10px; }
+        .btn-details { flex: 1; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 12px; border-radius: 14px; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.3s ease; }
+        .btn-details:hover { background: rgba(255, 255, 255, 0.18); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(22px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .btn-test { display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 10px; background: rgba(0, 245, 160, 0.08); border: 1px solid rgba(0, 245, 160, 0.35); color: var(--accent-emerald); padding: 10px; border-radius: 14px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease; }
+        .btn-test:hover { background: rgba(0, 245, 160, 0.18); box-shadow: 0 0 18px rgba(0, 245, 160, 0.35); }
+        .lab-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid rgba(0, 245, 160, 0.2); border-radius: 24px; padding: 26px; backdrop-filter: blur(16px); cursor: pointer; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; }
+        .lab-card:hover { transform: translateY(-8px); border-color: var(--accent-emerald); box-shadow: 0 15px 35px -10px rgba(0, 245, 160, 0.35); }
+        .lab-badge { align-self: flex-start; background: rgba(0, 245, 160, 0.12); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 1.4px; padding: 4px 10px; border-radius: 12px; font-weight: 700; }
+        .lab-card h3 { font-size: 1.35rem; font-weight: 800; color: #fff; }
+        .lab-card p { color: var(--text-sub); font-size: 0.9rem; line-height: 1.5; flex-grow: 1; }
+        .lab-card-cta { color: var(--accent-emerald); font-weight: 800; font-size: 0.88rem; letter-spacing: 0.8px; text-transform: uppercase; }
+        .btn-order { flex: 1.2; background: linear-gradient(135deg, #1877f2, #00f2fe); color: #fff; border: none; padding: 12px; border-radius: 14px; font-weight: 800; font-size: 0.88rem; letter-spacing: 0.4px; cursor: pointer; text-decoration: none; text-align: center; box-shadow: 0 0 18px rgba(24, 119, 242, 0.65); display: flex; align-items: center; justify-content: center; animation: orderGlow 1.8s ease-in-out infinite; text-transform: uppercase; }
+        @keyframes orderGlow { 0%, 100% { box-shadow: 0 0 14px rgba(24, 119, 242, 0.55), 0 0 28px rgba(0, 242, 254, 0.25); } 50% { box-shadow: 0 0 28px rgba(24, 119, 242, 0.95), 0 0 46px rgba(0, 242, 254, 0.55); } }
+        .reviews-section { margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .reviews-header { text-align: center; margin-bottom: 40px; }
+        .reviews-header h2 { font-size: 2.2rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+        .reviews-summary { font-size: 1.1rem; color: var(--text-sub); display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .stars-gold { color: var(--accent-gold); letter-spacing: 2px; }
+        .review-card { background: var(--card-bg); border: 1px solid rgba(255, 183, 3, 0.15); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+        .review-user { display: flex; align-items: center; justify-content: space-between; }
+        .user-info { display: flex; align-items: center; gap: 12px; }
+        .user-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; }
+        .user-name { font-weight: 700; color: #fff; }
+        .user-verified { font-size: 0.75rem; color: var(--accent-emerald); }
+        .review-item-tag { display: inline-block; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: var(--accent-cyan); font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; align-self: flex-start; font-weight: 600; }
+        .review-comment { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
+        .modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.35s ease, visibility 0.35s ease; }
+        .modal.active { opacity: 1; visibility: visible; pointer-events: auto; }
+        .modal-box { background: #0d121f; border: 1px solid var(--accent-cyan); box-shadow: 0 0 60px rgba(0, 242, 254, 0.3); border-radius: 24px; max-width: 580px; width: 100%; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto; transform: translateY(22px) scale(0.97); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+        .modal.active .modal-box { transform: translateY(0) scale(1); }
+        .close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.1); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
+        .modal-cat { font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+        .modal-title { font-size: 2rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+        .modal-sub { color: var(--text-sub); font-size: 0.95rem; margin-bottom: 20px; }
+        .modal-text { color: #cbd5e1; line-height: 1.65; font-size: 0.98rem; margin-bottom: 28px; }
+        .modal-fb-btn { display: flex; align-items: center; justify-content: center; width: 100%; background: linear-gradient(135deg, #1877f2, #00f2fe); color: #fff; padding: 16px; border-radius: 16px; font-weight: 800; font-size: 1.05rem; text-decoration: none; text-transform: uppercase; animation: orderGlow 1.8s ease-in-out infinite; }
+        .modal-test-btn { display: none; align-items: center; justify-content: center; width: 100%; margin-bottom: 12px; background: rgba(0, 245, 160, 0.1); border: 1px solid rgba(0, 245, 160, 0.4); color: var(--accent-emerald); padding: 14px; border-radius: 16px; font-weight: 800; font-size: 0.95rem; text-decoration: none; text-transform: uppercase; }
+        .modal-test-btn.show { display: flex; }
+        footer { margin-top: 60px; text-align: center; padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-sub); font-size: 0.8rem; }
+        @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } header { flex-direction: column; gap: 15px; } }
     </style>
 </head>
 <body>
     <div class="top-notice">
-        <span>⚡ EXCLUSIVE CATALOG // NAROČILA & VPRAŠANJA DIREKTNO NA FACEBOOK</span>
+        <span>⚡ NAROČILA & VPRAŠANJA DIREKTNO NA <span class="glow-msg">MESSENGER</span> / <span class="glow-wa">WHATSAPP</span></span>
         <span class="research-badge">FOR RESEARCH PURPOSES ONLY</span>
     </div>
     <div class="container">
         <header>
-            <div class="logo">
-                MIA LAB <span class="logo-badge">VERIFIED</span>
-            </div>
+            <div class="logo">MIA LAB <span class="logo-badge">VERIFIED</span></div>
             <div class="header-actions">
-                <a href="https://wa.me/message/TRV4OCQQ3FDYD1" target="_blank" rel="noopener" class="wa-btn-header">
-                    WHATSAPP
-                </a>
-                <a href="https://m.me/miamlakarr" class="fb-btn-header" onclick="openMessenger(event)">
-                    KONTAKTIRAJ NAS
-                </a>
+                <a href="https://wa.me/message/TRV4OCQQ3FDYD1" target="_blank" rel="noopener" class="wa-btn-header">WHATSAPP</a>
+                <a href="https://m.me/miamlakarr" class="fb-btn-header" onclick="openMessenger(event)">KONTAKTIRAJ NAS</a>
             </div>
         </header>
         <section class="hero">
@@ -631,6 +149,7 @@
                 <button class="filter-btn" onclick="filterItems('rast', event)">RASTNI HORMON</button>
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
+                <button class="filter-btn lab-tab" onclick="showLabTests(event)">LABORATORIJSKI TESTI</button>
                 <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
             </div>
         </section>
@@ -638,16 +157,11 @@
         <section class="reviews-section" id="reviews-container">
             <div class="reviews-header">
                 <h2>Mnenja Uporabnikov</h2>
-                <div class="reviews-summary">
-                    <span class="stars-gold">★ ★ ★ ★ ★</span>
-                    <span><strong>4.9</strong> / 5.0 (Preverjene stranke)</span>
-                </div>
+                <div class="reviews-summary"><span class="stars-gold">★ ★ ★ ★ ★</span><span><strong>4.9</strong> / 5.0 (Preverjene stranke)</span></div>
             </div>
             <div class="grid" id="reviews-grid"></div>
         </section>
-        <footer>
-            <p>© MIA LAB. ALL PRODUCTS ARE INTENDED STRICTLY FOR RESEARCH PURPOSES ONLY.</p>
-        </footer>
+        <footer><p>© MIA LAB. ALL PRODUCTS ARE INTENDED STRICTLY FOR RESEARCH PURPOSES ONLY.</p></footer>
     </div>
     <div class="modal" id="details-modal">
         <div class="modal-box">
@@ -656,180 +170,43 @@
             <h2 class="modal-title" id="m-title"></h2>
             <div class="modal-sub" id="m-sub"></div>
             <p class="modal-text" id="m-text"></p>
-            <a href="https://m.me/miamlakarr" id="modal-order-btn" class="modal-fb-btn" onclick="openMessenger(event, currentProductName)">
-                ⚡ Naroči zdaj
-            </a>
+            <a href="#" id="modal-test-btn" class="modal-test-btn" target="_blank" rel="noopener">Poglej test</a>
+            <a href="https://m.me/miamlakarr" id="modal-order-btn" class="modal-fb-btn" onclick="openMessenger(event, currentProductName)">⚡ Naroči zdaj</a>
         </div>
     </div>
     <script>
         const FB_CHAT = "https://m.me/miamlakarr";
         let currentProductName = "";
-
         function openMessenger(e, productName) {
-            if (e) {
-                e.preventDefault();
-                e.stopPropagation();
-            }
+            if (e) { e.preventDefault(); e.stopPropagation(); }
             let url = FB_CHAT;
             const item = productName || currentProductName;
-            if (item) {
-                url += "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + item + ".");
-            }
+            if (item) url += "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + item + ".");
             window.location.assign(url);
             return false;
         }
-
         const catalog = [
-            {
-                id: 'retatrutide-20mg',
-                name: 'Retatrutide (20mg)',
-                sub: 'Triple Agonist (GLP-1 / GIP / Glucagon)',
-                category: 'metabolizem',
-                catLabel: 'Metabolizem & Oksidacija',
-                glowClass: 'v-retatrutide',
-                emoji: '⚡',
-                tag: '20MG HIGH DOSE',
-                short: 'Najnovejša in najmočnejša formula za regulacijo apetita ter pospešeno oksidacijo maščob.',
-                full: 'Retatrutide (20mg) je vrhunec presnovne znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje drastično zmanjšuje lakoto ter neposredno spodbuja porabo maščobnih zalog za energijo.'
-            },
-            {
-                id: 'bpc-tb-blend',
-                name: 'BPC-157 (5mg) + TB-500 (5mg)',
-                sub: 'Ultimate Recovery Blend (10mg Total)',
-                category: 'obnova',
-                catLabel: 'Obnova Kit & Sklepov',
-                glowClass: 'v-bpc',
-                emoji: '🧬',
-                tag: 'DUAL STACK',
-                short: 'Popolna sinergija za celično obnovu kit, vezi, sklepov in odpravljanje mikrovnetij.',
-                full: 'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovu tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.'
-            },
-            {
-                id: 'cjc-ipamorelin',
-                name: 'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)',
-                sub: 'Synergistic GH Secretagogue Blend',
-                category: 'rast',
-                catLabel: 'Rastni Hormon & Vitalnost',
-                glowClass: 'v-cjc',
-                emoji: '🔥',
-                tag: 'GH POWER STACK',
-                short: 'Izjemna sinergija za naraven in močan dvig lastnega rastnega hormona ter hitrejšo obnovo.',
-                full: 'Udarne naravne sekrecijske spojine! CJC-1295 no DAC in Ipamorelin delujeta z roko v roki za sproščanje čistih pulzov rastnega hormona brez dviga kortizola ali prolaktina. Idealno za izgubo maščobe, čisto mišično maso in opazno regeneracijo.'
-            },
-            {
-                id: 'ghkcu-100mg',
-                name: 'GHK-Cu (100mg)',
-                sub: 'Bakrov Tripeptid-1 High-Potency',
-                category: 'lepota',
-                catLabel: 'Koža & Estetika',
-                glowClass: 'v-ghk',
-                emoji: '✨',
-                tag: '100MG MEGA DOSE',
-                short: 'Zlati standard za sintezo kolagena, regeneracijo kože, zmanjšanje gub in rast las.',
-                full: 'GHK-Cu (100mg) v visoki koncentraciji deluje kot močan regenerator DNK in tkiv. Spodbuja naravno proizvodnjo kolagena, elastina ter hialuronske kisline, obenem pa močno stimulira lasne mešičke za gostejše lase.'
-            },
-            {
-                id: 'klow-80mg',
-                name: 'KLOW (80mg)',
-                sub: 'Ultra Complex Beauty Blend',
-                category: 'lepota',
-                catLabel: 'Koža & Estetika',
-                glowClass: 'v-klow',
-                emoji: '👑',
-                tag: 'PREMIUM COMPLEX',
-                short: 'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.',
-                full: 'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične structures.'
-            },
-            {
-                id: 'semax-5mg',
-                name: 'Semax (5mg)',
-                sub: 'Kognitivni Heptapeptid',
-                category: 'možgani',
-                catLabel: 'Fokus & Spomin',
-                glowClass: 'v-semax',
-                emoji: '🧠',
-                tag: 'BDNF BOOST',
-                short: 'Nootropna formula za kognitivni dvig, jasnost misli, koncentracijo in nevrozaščito.',
-                full: 'Semax (5mg) drastično dvigne raven BDNF v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.'
-            },
-            {
-                id: 'selank-10mg',
-                name: 'Selank (10mg)',
-                sub: 'Anksiolitični Peptid',
-                category: 'možgani',
-                catLabel: 'Fokus & Spomin',
-                glowClass: 'v-selank',
-                emoji: '🛡️',
-                tag: 'STRESS RELIEF',
-                short: 'Učinkovito zmanjšuje stres in tesnobo ter omogoča miren um brez utrujenosti.',
-                full: 'Selank (10mg) je peptidna podpora za živčni sistem. Regulira GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost.'
-            },
-            {
-                id: 'mt1',
-                name: 'Melanotan-1 (MT-1)',
-                sub: 'Selektivni Melanin Agonist',
-                category: 'lepota',
-                catLabel: 'Koža & Estetika',
-                glowClass: 'v-mt1',
-                emoji: '☀️',
-                tag: 'TAN & PROTECT',
-                short: 'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo soncu ali solariju.',
-                full: 'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz.'
-            }
+            { id:'retatrutide-20mg', name:'Retatrutide (20mg)', sub:'Triple Agonist (GLP-1 / GIP / Glucagon)', category:'metabolizem', catLabel:'Metabolizem & Oksidacija', glowClass:'v-retatrutide', emoji:'⚡', tag:'20MG HIGH DOSE', short:'Najnovejša in najmočnejša formula za regulacijo apetita ter pospešeno oksidacijo maščob.', full:'Retatrutide (20mg) je vrhunec presnovne znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje drastično zmanjšuje lakoto ter neposredno spodbuja porabo maščobnih zalog za energijo.', testUrl:'https://verify.janoshik.com/tests/207720-Retatrutide_FGQ7YHK3UTB3' },
+            { id:'bpc-tb-blend', name:'BPC-157 (5mg) + TB-500 (5mg)', sub:'Ultimate Recovery Blend (10mg Total)', category:'obnova', catLabel:'Obnova Kit & Sklepov', glowClass:'v-bpc', emoji:'🧬', tag:'DUAL STACK', short:'Popolna sinergija za celično obnovu kit, vezi, sklepov in odpravljanje mikrovnetij.', full:'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovu tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.' },
+            { id:'cjc-ipamorelin', name:'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)', sub:'Synergistic GH Secretagogue Blend', category:'rast', catLabel:'Rastni Hormon & Vitalnost', glowClass:'v-cjc', emoji:'🔥', tag:'GH POWER STACK', short:'Izjemna sinergija za naraven in močan dvig lastnega rastnega hormona ter hitrejšo obnovo.', full:'Udarne naravne sekrecijske spojine! CJC-1295 no DAC in Ipamorelin delujeta z roko v roki za sproščanje čistih pulzov rastnega hormona brez dviga kortizola ali prolaktina. Idealno za izgubo maščobe, čisto mišično maso in opazno regeneracijo.', testUrl:'https://verify.janoshik.com/tests/147198-Ipamorelin_CEZPU4V1UM5Z' },
+            { id:'ghkcu-100mg', name:'GHK-Cu (100mg)', sub:'Bakrov Tripeptid-1 High-Potency', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-ghk', emoji:'✨', tag:'100MG MEGA DOSE', short:'Zlati standard za sintezo kolagena, regeneracijo kože, zmanjšanje gub in rast las.', full:'GHK-Cu (100mg) v visoki koncentraciji deluje kot močan regenerator DNK in tkiv. Spodbuja naravno proizvodnjo kolagena, elastina ter hialuronske kisline, obenem pa močno stimulira lasne mešičke za gostejše lase.', testUrl:'https://verify.janoshik.com/tests/95743-GHKCU_100mg_9SMFNQGB84WF' },
+            { id:'klow-80mg', name:'KLOW (80mg)', sub:'Ultra Complex Beauty Blend', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-klow', emoji:'👑', tag:'PREMIUM COMPLEX', short:'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.', full:'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične structures.', testUrl:'https://verify.janoshik.com/tests/207724-KLOW_JZP3GPTXE5IG' },
+            { id:'semax-5mg', name:'Semax (5mg)', sub:'Kognitivni Heptapeptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-semax', emoji:'🧠', tag:'BDNF BOOST', short:'Nootropna formula za kognitivni dvig, jasnost misli, koncentracijo in nevrozaščito.', full:'Semax (5mg) drastično dvigne raven BDNF v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.' },
+            { id:'selank-10mg', name:'Selank (10mg)', sub:'Anksiolitični Peptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-selank', emoji:'🛡️', tag:'STRESS RELIEF', short:'Učinkovito zmanjšuje stres in tesnobo ter omogoča miren um brez utrujenosti.', full:'Selank (10mg) je peptidna podpora za živčni sistem. Regulira GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost.', testUrl:'https://verify.janoshik.com/tests/217117-NAcetyl_Selank_Amidate_YTK44PHQPXPS' },
+            { id:'mt1', name:'Melanotan-1 (MT-1)', sub:'Selektivni Melanin Agonist', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-mt1', emoji:'☀️', tag:'TAN & PROTECT', short:'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo soncu ali solariju.', full:'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz.' }
         ];
         const reviews = [
-            {
-                name: "Rok Novak",
-                stars: "★ ★ ★ ★ ★",
-                rating: 5,
-                product: "BPC-157 (5mg) + TB-500 (5mg)",
-                text: "Po mesecih bolečin v rami zaradi uteži se je zadeva po 3 tednih uporabe zrihtala. Top komunikacija na FB, odpošljeno takoj!"
-            },
-            {
-                name: "Anja Kovač",
-                stars: "★ ★ ★ ★ ★",
-                rating: 5,
-                product: "GHK-Cu (100mg)",
-                text: "Koža na obrazu je opazno bolj napeta, tekstura se je čisto spremenila. Vsekakor še naročim!"
-            },
-            {
-                name: "Matej Zupančič",
-                stars: "★ ★ ★ ★ ☆",
-                rating: 4,
-                product: "Retatrutide (20mg)",
-                text: "Apetit se je zmanjšal praktično naslednji dan. Kilogrami gredo lepo dol. Enih 4/5 zvezdic dam samo zato, ker sem moral na odgovore na FB vmes čakati par ur, ampak paket je prišel hitro."
-            },
-            {
-                name: "Katja Oblak",
-                stars: "★ ★ ★ ★ ★",
-                rating: 5,
-                product: "KLOW (80mg)",
-                text: "Za ta lepotni mix sem izvedela od prijateljice in sem navdušena. Ten je super sijoč, vsi opazijo razliko."
-            },
-            {
-                name: "Luka Breznik",
-                stars: "★ ★ ★ ★ ★",
-                rating: 5,
-                product: "Semax (5mg)",
-                text: "Fokus v pisarni med izpitnim obdobjem je bil neverjeten. Brez kofeinskega 'crash-a', le čista mentalna jasnost."
-            },
-            {
-                name: "Lara Hribar",
-                stars: "★ ★ ★ ★ ☆",
-                rating: 4,
-                product: "Melanotan-1 (MT-1)",
-                text: "Super barva že po dveh izpostavljanjih soncu! Dajem 4 zvezdice, ker sem na začetku imela malo lahke slabosti, ampak je hitro minilo."
-            }
+            { name:"Rok Novak", stars:"★ ★ ★ ★ ★", rating:5, product:"BPC-157 (5mg) + TB-500 (5mg)", text:"Po mesecih bolečin v rami zaradi uteži se je zadeva po 3 tednih uporabe zrihtala. Top komunikacija na FB, odpošljeno takoj!" },
+            { name:"Anja Kovač", stars:"★ ★ ★ ★ ★", rating:5, product:"GHK-Cu (100mg)", text:"Koža na obrazu je opazno bolj napeta, tekstura se je čisto spremenila. Vsekakor še naročim!" },
+            { name:"Matej Zupančič", stars:"★ ★ ★ ★ ☆", rating:4, product:"Retatrutide (20mg)", text:"Apetit se je zmanjšal praktično naslednji dan. Kilogrami gredo lepo dol. Enih 4/5 zvezdic dam samo zato, ker sem moral na odgovore na FB vmes čakati par ur, ampak paket je prišel hitro." },
+            { name:"Katja Oblak", stars:"★ ★ ★ ★ ★", rating:5, product:"KLOW (80mg)", text:"Za ta lepotni mix sem izvedela od prijateljice in sem navdušena. Ten je super sijoč, vsi opazijo razliko." },
+            { name:"Luka Breznik", stars:"★ ★ ★ ★ ★", rating:5, product:"Semax (5mg)", text:"Fokus v pisarni med izpitnim obdobjem je bil neverjeten. Brez kofeinskega 'crash-a', le čista mentalna jasnost." },
+            { name:"Lara Hribar", stars:"★ ★ ★ ★ ☆", rating:4, product:"Melanotan-1 (MT-1)", text:"Super barva že po dveh izpostavljanjih soncu! Dajem 4 zvezdice, ker sem na začetku imela malo lahke slabosti, ampak je hitro minilo." }
         ];
         function render(items) {
-            const grid = document.getElementById('product-grid');
-            grid.innerHTML = items.map(p => `
-                <div class="card">
-                    <div class="card-visual">
-                        <div class="visual-glow ${p.glowClass}"></div>
-                        <div class="visual-symbol">${p.emoji}</div>
-                        <span class="visual-tag">${p.tag}</span>
-                    </div>
+            document.getElementById('product-grid').innerHTML = items.map((p, i) => `
+                <div class="card" style="animation-delay:${i * 0.06}s">
+                    <div class="card-visual"><div class="visual-glow ${p.glowClass}"></div><div class="visual-symbol">${p.emoji}</div><span class="visual-tag">${p.tag}</span></div>
                     <div class="card-body">
                         <div class="card-cat">${p.catLabel}</div>
                         <h3 class="card-title">${p.name}</h3>
@@ -839,58 +216,52 @@
                             <button class="btn-details" onclick="openModal('${p.id}')">Podrobno</button>
                             <a href="${FB_CHAT}" class="btn-order" onclick="openMessenger(event, '${p.name.replace(/'/g, "\\'")}')">⚡ Naroči zdaj</a>
                         </div>
+                        ${p.testUrl ? `<a class="btn-test" href="${p.testUrl}" target="_blank" rel="noopener">Poglej test</a>` : ''}
                     </div>
-                </div>
-            `).join('');
+                </div>`).join('');
+        }
+        function showLabTests(e) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (e && e.target) e.target.classList.add('active');
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = catalog.filter(x => x.testUrl).map((p, i) => `
+                <a class="lab-card" href="${p.testUrl}" target="_blank" rel="noopener" style="animation-delay:${i * 0.07}s">
+                    <span class="lab-badge">JANOSHIK VERIFY</span>
+                    <h3>${p.name}</h3>
+                    <p>Neodvisni laboratorijski test. Klikni in odpri originalno poročilo na Janoshik.</p>
+                    <span class="lab-card-cta">Poglej test →</span>
+                </a>`).join('');
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         function renderReviews() {
-            const rGrid = document.getElementById('reviews-grid');
-            rGrid.innerHTML = reviews.map(r => {
+            document.getElementById('reviews-grid').innerHTML = reviews.map(r => {
                 const initials = r.name.split(' ').map(n => n[0]).join('');
-                return `
-                    <div class="review-card">
-                        <div class="review-user">
-                            <div class="user-info">
-                                <div class="user-avatar">${initials}</div>
-                                <div>
-                                    <div class="user-name">${r.name}</div>
-                                    <div class="user-verified">✓ Preverjen kupec</div>
-                                </div>
-                            </div>
-                            <div class="stars-gold">${r.stars}</div>
-                        </div>
-                        <span class="review-item-tag">Kupljeno: ${r.product}</span>
-                        <p class="review-comment">"${r.text}"</p>
-                    </div>
-                `;
+                return `<div class="review-card"><div class="review-user"><div class="user-info"><div class="user-avatar">${initials}</div><div><div class="user-name">${r.name}</div><div class="user-verified">✓ Preverjen kupec</div></div></div><div class="stars-gold">${r.stars}</div></div><span class="review-item-tag">Kupljeno: ${r.product}</span><p class="review-comment">"${r.text}"</p></div>`;
             }).join('');
         }
         function filterItems(cat, e) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
-            if(cat === 'vse') {
-                render(catalog);
-            } else {
-                render(catalog.filter(x => x.category === cat));
-            }
+            render(cat === 'vse' ? catalog : catalog.filter(x => x.category === cat));
         }
         function scrollToReviews() {
             const el = document.getElementById('reviews-container');
-            if(el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
         }
         function openModal(id) {
             const p = catalog.find(x => x.id === id);
-            if(!p) return;
+            if (!p) return;
             currentProductName = p.name;
             document.getElementById('m-cat').innerText = p.catLabel;
             document.getElementById('m-title').innerText = p.name;
             document.getElementById('m-sub').innerText = p.sub;
             document.getElementById('m-text').innerText = p.full;
             const orderBtn = document.getElementById('modal-order-btn');
-            if (orderBtn) {
-                orderBtn.href = FB_CHAT + "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + p.name + ".");
+            if (orderBtn) orderBtn.href = FB_CHAT + "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + p.name + ".");
+            const testBtn = document.getElementById('modal-test-btn');
+            if (testBtn) {
+                if (p.testUrl) { testBtn.href = p.testUrl; testBtn.classList.add('show'); }
+                else { testBtn.href = '#'; testBtn.classList.remove('show'); }
             }
             document.getElementById('details-modal').classList.add('active');
         }
