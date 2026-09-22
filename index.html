@@ -46,6 +46,8 @@
         .filter-btn.lab-tab.active, .filter-btn.lab-tab:hover { background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan)); color: #000; box-shadow: 0 0 25px rgba(0, 245, 160, 0.55); }
         .filter-btn.howto-tab { background: rgba(178, 36, 239, 0.12); border-color: rgba(178, 36, 239, 0.45); color: #e9b3ff; }
         .filter-btn.howto-tab.active, .filter-btn.howto-tab:hover { background: linear-gradient(135deg, #b224ef, #4facfe); color: #fff; box-shadow: 0 0 25px rgba(178, 36, 239, 0.6); }
+        .filter-btn.about-tab { background: rgba(255, 79, 139, 0.12); border-color: rgba(255, 79, 139, 0.5); color: #ff9fbc; }
+        .filter-btn.about-tab.active, .filter-btn.about-tab:hover { background: linear-gradient(135deg, #ff4f8b, #ffb56b); color: #fff; box-shadow: 0 0 25px rgba(255, 79, 139, 0.55); }
         .howto-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .howto-head { text-align: center; margin-bottom: 36px; }
         .howto-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 10%, #e9b3ff 50%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -68,9 +70,26 @@
         .howto-btn.msg { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 55%, #a5f3fc 100%); color: #041018; animation: skyGlow 2.6s ease-in-out infinite; }
         .howto-note { font-size: 0.78rem; color: #86efac; font-weight: 600; }
         @media (max-width: 900px) { .howto-steps { grid-template-columns: 1fr; } .howto-step { min-height: auto; } }
+        .about-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; max-width: 880px; margin: 0 auto; width: 100%; }
+        .about-head { text-align: center; margin-bottom: 28px; }
+        .about-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 8%, #ff9fbc 48%, #ffb56b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .about-head p { color: var(--text-sub); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+        .about-stat { background: var(--card-bg); border: 1px solid rgba(255, 79, 139, 0.22); border-radius: 18px; padding: 18px 12px; text-align: center; animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .about-stat strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 1.25rem; font-weight: 700; color: #ff9fbc; text-shadow: 0 0 12px rgba(255, 79, 139, 0.65); margin-bottom: 4px; }
+        .about-stat span { font-size: 0.75rem; color: var(--text-sub); letter-spacing: 0.6px; text-transform: uppercase; }
+        .about-card { background: var(--card-bg); border: 1px solid rgba(255, 79, 139, 0.2); border-radius: 24px; padding: 32px 28px; backdrop-filter: blur(16px); margin-bottom: 28px; }
+        .about-card p { color: #cbd5e1; font-size: 0.98rem; line-height: 1.7; margin-bottom: 16px; }
+        .about-card p:last-child { margin-bottom: 0; }
+        .about-card h3 { font-size: 1.05rem; font-weight: 800; color: #ff9fbc; letter-spacing: 1px; text-transform: uppercase; margin: 22px 0 10px; }
+        .about-back-wrap { text-align: center; }
+        .about-back { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; min-width: 220px; padding: 14px 36px; border: none; border-radius: 30px; background: linear-gradient(135deg, #ff4f8b 0%, #ffb56b 100%); color: #fff; font-weight: 800; font-size: 0.88rem; letter-spacing: 2.4px; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 18px rgba(255, 79, 139, 0.5), 0 0 36px rgba(255, 181, 107, 0.25); animation: aboutGlow 2.4s ease-in-out infinite; }
+        .about-back:hover { transform: translateY(-2px) scale(1.04); }
+        @keyframes aboutGlow { 0%, 100% { box-shadow: 0 0 14px rgba(255, 79, 139, 0.45), 0 0 28px rgba(255, 181, 107, 0.2); } 50% { box-shadow: 0 0 24px rgba(255, 79, 139, 0.8), 0 0 42px rgba(255, 181, 107, 0.4); } }
+        @media (max-width: 800px) { .about-stats { grid-template-columns: repeat(2, 1fr); } }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; overflow: hidden; backdrop-filter: blur(16px); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; display: flex; flex-direction: column; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
-        .card:hover { transform: translateY(-8px); border-color: var(--accent-cyan); box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.35); }
+        .card { background: var(--card-bg); border: 1px solid rgba(0, 242, 254, 0.14); border-radius: 24px; overflow: hidden; backdrop-filter: blur(16px); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.45s ease; display: flex; flex-direction: column; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; box-shadow: 0 0 0 1px rgba(255, 183, 3, 0.06), 0 18px 40px -24px rgba(0, 0, 0, 0.8); }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent-cyan); box-shadow: 0 18px 40px -12px rgba(0, 242, 254, 0.45), 0 0 28px rgba(255, 183, 3, 0.12); }
         .card-visual { height: 180px; width: 100%; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #000; }
         .visual-glow { position: absolute; width: 120%; height: 120%; opacity: 0.7; filter: blur(30px); }
         .v-retatrutide { background: radial-gradient(circle, #00f2fe 0%, #4facfe 50%, #000 100%); }
@@ -142,7 +161,7 @@
         .review-comment { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
         .modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.35s ease, visibility 0.35s ease; }
         .modal.active { opacity: 1; visibility: visible; pointer-events: auto; }
-        .modal-box { background: #0d121f; border: 1px solid var(--accent-cyan); box-shadow: 0 0 60px rgba(0, 242, 254, 0.3); border-radius: 24px; max-width: 580px; width: 100%; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto; transform: translateY(22px) scale(0.97); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+        .modal-box { background: #0d121f; border: 1px solid rgba(0, 242, 254, 0.85); box-shadow: 0 0 70px rgba(0, 242, 254, 0.32), 0 0 28px rgba(255, 183, 3, 0.12); border-radius: 24px; max-width: 620px; width: 100%; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto; transform: translateY(22px) scale(0.97); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
         .modal.active .modal-box { transform: translateY(0) scale(1); }
         .close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.1); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
         .modal-cat { font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
@@ -174,7 +193,7 @@
         </header>
         <section class="hero">
             <h1>Izbrana Kolekcija</h1>
-            <p>Izberi spojino za podroben opis. Za vsa naročila, zalogo ali nasvet nas kontaktiraj direktno preko sporočila.</p>
+            <p>Izberi spojino in odpri podroben opis. Za naročilo, zalogo ali vprašanje nam piši neposredno.</p>
             <div class="filters">
                 <button class="filter-btn active" onclick="filterItems('vse', event)">VSI IZDELKI</button>
                 <button class="filter-btn" onclick="filterItems('metabolizem', event)">METABOLIZEM</button>
@@ -182,7 +201,8 @@
                 <button class="filter-btn" onclick="filterItems('rast', event)">RASTNI HORMON</button>
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
-                <button class="filter-btn howto-tab" onclick="showHowTo(event)">KAKO NAROČITI</button>
+                <button class="filter-btn howto-tab" onclick="showHowTo(event)">KAKO NAROČITI?</button>
+                <button class="filter-btn about-tab" onclick="showAbout(event)">O NAS</button>
                 <button class="filter-btn lab-tab" onclick="showLabTests(event)">LABORATORIJSKI TESTI</button>
                 <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
             </div>
@@ -244,14 +264,14 @@
             return false;
         }
         const catalog = [
-            { id:'retatrutide-20mg', name:'Retatrutide (20mg)', sub:'Triple Agonist (GLP-1 / GIP / Glucagon)', category:'metabolizem', catLabel:'Metabolizem & Oksidacija', glowClass:'v-retatrutide', emoji:'⚡', tag:'20MG HIGH DOSE', price:150, priceGlow:'p-cyan', short:'Najnovejša in najmočnejša formula za regulacijo apetita ter pospešeno oksidacijo maščob.', full:'Retatrutide (20mg) je vrhunec presnovne znanosti. Z hkratnim delovanjem na GLP-1, GIP in Glukagonske receptorje drastično zmanjšuje lakoto ter neposredno spodbuja porabo maščobnih zalog za energijo.', testUrl:'https://verify.janoshik.com/tests/207720-Retatrutide_FGQ7YHK3UTB3' },
-            { id:'bpc-tb-blend', name:'BPC-157 (5mg) + TB-500 (5mg)', sub:'Ultimate Recovery Blend (10mg Total)', category:'obnova', catLabel:'Obnova Kit & Sklepov', glowClass:'v-bpc', emoji:'🧬', tag:'DUAL STACK', price:50, priceGlow:'p-emerald', short:'Popolna sinergija za celično obnovu kit, vezi, sklepov in odpravljanje mikrovnetij.', full:'Maksimalna regenerativna moč v enem odmerku. BPC-157 (5mg) lokalno pospešuje angiogenezo in obnovu tkiv, medtem ko TB-500 (5mg) deluje sistemsko za hitro regeneracijo celotnega gibalnega aparata.' },
-            { id:'cjc-ipamorelin', name:'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)', sub:'Synergistic GH Secretagogue Blend', category:'rast', catLabel:'Rastni Hormon & Vitalnost', glowClass:'v-cjc', emoji:'🔥', tag:'GH POWER STACK', price:50, priceGlow:'p-gold', short:'Izjemna sinergija za naraven in močan dvig lastnega rastnega hormona ter hitrejšo obnovo.', full:'Udarne naravne sekrecijske spojine! CJC-1295 no DAC in Ipamorelin delujeta z roko v roki za sproščanje čistih pulzov rastnega hormona brez dviga kortizola ali prolaktina. Idealno za izgubo maščobe, čisto mišično maso in opazno regeneracijo.', testUrl:'https://verify.janoshik.com/tests/147198-Ipamorelin_CEZPU4V1UM5Z' },
-            { id:'ghkcu-100mg', name:'GHK-Cu (100mg)', sub:'Bakrov Tripeptid-1 High-Potency', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-ghk', emoji:'✨', tag:'100MG MEGA DOSE', price:70, priceGlow:'p-blue', short:'Zlati standard za sintezo kolagena, regeneracijo kože, zmanjšanje gub in rast las.', full:'GHK-Cu (100mg) v visoki koncentraciji deluje kot močan regenerator DNK in tkiv. Spodbuja naravno proizvodnjo kolagena, elastina ter hialuronske kisline, obenem pa močno stimulira lasne mešičke za gostejše lase.', testUrl:'https://verify.janoshik.com/tests/95743-GHKCU_100mg_9SMFNQGB84WF' },
-            { id:'klow-80mg', name:'KLOW (80mg)', sub:'Ultra Complex Beauty Blend', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-klow', emoji:'👑', tag:'PREMIUM COMPLEX', price:130, priceGlow:'p-violet', short:'Ekskluzivna mešanica za sijočo polt, globinsko hidracijo in celični anti-aging efekt.', full:'KLOW (80mg) je celovit lepotni kompleks, ustvarjen za popoln "glow" efekt. Sestavljen iz visokokakovostnih spojin za zaščito pred oksidativnim stresom, izboljšanje teksture kože ter obnovu celične structures.', testUrl:'https://verify.janoshik.com/tests/207724-KLOW_JZP3GPTXE5IG' },
-            { id:'semax-5mg', name:'Semax (5mg)', sub:'Kognitivni Heptapeptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-semax', emoji:'🧠', tag:'BDNF BOOST', price:50, priceGlow:'p-purple', short:'Nootropna formula za kognitivni dvig, jasnost misli, koncentracijo in nevrozaščito.', full:'Semax (5mg) drastično dvigne raven BDNF v možganih. Omogoča ekstremno mentalno jasnost, hitrejše pomnjenje in boljšo odzivnost pod stresom.' },
-            { id:'selank-10mg', name:'Selank (10mg)', sub:'Anksiolitični Peptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-selank', emoji:'🛡️', tag:'STRESS RELIEF', price:50, priceGlow:'p-pink', short:'Učinkovito zmanjšuje stres in tesnobo ter omogoča miren um brez utrujenosti.', full:'Selank (10mg) je peptidna podpora za živčni sistem. Regulira GABA receptorje ter odpravlja notranji nemir, anksioznost in mentalno izčrpanost.', testUrl:'https://verify.janoshik.com/tests/217117-NAcetyl_Selank_Amidate_YTK44PHQPXPS' },
-            { id:'mt1', name:'Melanotan-1 (MT-1)', sub:'Selektivni Melanin Agonist', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-mt1', emoji:'☀️', tag:'TAN & PROTECT', price:50, priceGlow:'p-rose', short:'Spodbuja naravno porjavitev kože z minimalno izpostavljenostjo soncu ali solariju.', full:'Melanotan-1 (MT-1) spodbuja melanocite k varnejši proizvodnji temnega pigmenta (eumelanina). Omogoča hiter, naraven in dolgotrajen porjavel videz.' }
+            { id:'retatrutide-20mg', name:'Retatrutide (20mg)', sub:'Triple Agonist (GLP-1 / GIP / Glucagon)', category:'metabolizem', catLabel:'Metabolizem & Oksidacija', glowClass:'v-retatrutide', emoji:'⚡', tag:'20MG HIGH DOSE', price:150, priceGlow:'p-cyan', short:'Trojni agonist receptorjev GLP-1, GIP in glukagona za raziskave apetita in porabe energije.', full:'Retatrutide (20 mg) je raziskovalna spojina iz skupine trojnih agonistov. V literaturi se preučuje sočasno delovanje na receptorje GLP-1, GIP in glukagona, ki so povezani z uravnavanjem apetita, občutkom sitosti in porabo energije iz maščobnih zalog. Vialka vsebuje 20 mg liofilizirane spojine in spada v višji raziskovalni razred tega kataloga. Identiteto serije preveriš sam: odpreš originalno poročilo Janoshik in primerjaš oznako. Opis je informativen. Spojina ni zdravilo, ni prehransko dopolnilo in ni namenjena uporabi pri ljudeh.', testUrl:'https://verify.janoshik.com/tests/207720-Retatrutide_FGQ7YHK3UTB3' },
+            { id:'bpc-tb-blend', name:'BPC-157 (5mg) + TB-500 (5mg)', sub:'Ultimate Recovery Blend (10mg Total)', category:'obnova', catLabel:'Obnova Kit & Sklepov', glowClass:'v-bpc', emoji:'🧬', tag:'DUAL STACK', price:50, priceGlow:'p-emerald', short:'Dve raziskovalni spojini v eni vialki, namenjeni preučevanju obnove kit, vezi in sklepov.', full:'Mešanica združuje BPC-157 (5 mg) in TB-500 (5 mg), skupaj 10 mg v eni vialki. BPC-157 se v raziskavah preučuje zaradi lokalnega vpliva na obnovo tkiva in tvorbo novega žilja. TB-500 se preučuje zaradi širšega, sistemskega vpliva na mišice, kite in vezivno tkivo. V literaturi ju pogosto obravnavajo skupaj, ker naj bi se dopolnjevali: ena spojina bolj lokalno, druga bolj po telesu. Katalog ju zato vodi kot en izdelek za raziskave gibalnega aparata. Ni zdravilo in ni namenjeno uporabi pri ljudeh ali živalih.' },
+            { id:'cjc-ipamorelin', name:'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)', sub:'Synergistic GH Secretagogue Blend', category:'rast', catLabel:'Rastni Hormon & Vitalnost', glowClass:'v-cjc', emoji:'🔥', tag:'GH POWER STACK', price:50, priceGlow:'p-gold', short:'Dva sekretagoga v eni vialki za raziskave pulznega sproščanja rastnega hormona.', full:'CJC-1295 brez DAC (5 mg) in ipamorelin (5 mg) sta v isti vialki. Obe spojini se v raziskavah preučujeta kot spodbujevalki sproščanja rastnega hormona. Ipamorelin velja za selektivnejši sekretagog, CJC-1295 brez DAC pa za krajše, pulzno delovanje, brez podaljšanega DAC-veziva. V literaturi ju pogosto omenjajo skupaj, ker naj bi se dopolnjevala in sprožala krajše pulze, ne pa stalno povišane ravni. Raziskave ju povezujejo tudi s sestavo telesa in hitrostjo obnove. Kjer je test na voljo, odpreš originalno poročilo. Samo za raziskovalne namene.', testUrl:'https://verify.janoshik.com/tests/147198-Ipamorelin_CEZPU4V1UM5Z' },
+            { id:'ghkcu-100mg', name:'GHK-Cu (100mg)', sub:'Bakrov Tripeptid-1 High-Potency', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-ghk', emoji:'✨', tag:'100MG MEGA DOSE', price:70, priceGlow:'p-blue', short:'Bakrov tripeptid visoke koncentracije za raziskave kolagena, kože in lasnih mešičkov.', full:'GHK-Cu (100 mg) je bakrov tripeptid v visoki koncentraciji. V raziskavah ga obravnavajo kot signalno molekulo za obnovo tkiva: preučujejo vpliv na nastajanje kolagena, elastina in hialuronske kisline ter na teksturo kože. Literatura ga povezuje tudi z lasnimi mešički in splošnim videzom kože. Vialka vsebuje 100 mg, zato je v katalogu uvrščena med močnejše enote. Laboratorijsko poročilo odpreš sam in preveriš serijo. Namenjeno izključno raziskovalni uporabi.', testUrl:'https://verify.janoshik.com/tests/95743-GHKCU_100mg_9SMFNQGB84WF' },
+            { id:'klow-80mg', name:'KLOW (80mg)', sub:'Ultra Complex Beauty Blend', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-klow', emoji:'👑', tag:'PREMIUM COMPLEX', price:130, priceGlow:'p-violet', short:'Izbrana lepotna mešanica za raziskave teksture kože, hidracije in celične zaščite.', full:'KLOW (80 mg) je kompleksna mešanica v sklopu kože in estetike. Namenjena je raziskavam, povezanim z videzom kože, globljo hidracijo in zaščito pred oksidativnim stresom. Sestava je pripravljena kot ena vialka z 80 mg, ne kot dolg seznam ločenih izdelkov. Neodvisno laboratorijsko poročilo odpreš na povezavi in preveriš serijo sam. To ni kozmetika za domačo uporabo in ni zdravilo. Opis ne obljublja rezultata.', testUrl:'https://verify.janoshik.com/tests/207724-KLOW_JZP3GPTXE5IG' },
+            { id:'semax-5mg', name:'Semax (5mg)', sub:'Kognitivni Heptapeptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-semax', emoji:'🧠', tag:'BDNF BOOST', price:50, priceGlow:'p-purple', short:'Heptapeptid, ki ga raziskave povezujejo z BDNF, pozornostjo in mentalno jasnostjo.', full:'Semax (5 mg) je sintetični heptapeptid, ki ga literatura uvršča med nootropne raziskovalne spojine. Preučuje se zaradi vpliva na BDNF, beljakovino, povezano z učenjem, pomnjenjem in nevroplastičnostjo. V študijah ga povezujejo z boljšo pozornostjo, jasnejšim razmišljanjem in mirnejšo odzivnostjo pod obremenitvijo, brez značilnega padca, ki ga poznamo pri kofeinu. Vialka vsebuje 5 mg. Opis je informativen in ne vključuje navodil za uporabo. Samo za raziskovalne namene.' },
+            { id:'selank-10mg', name:'Selank (10mg)', sub:'Anksiolitični Peptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-selank', emoji:'🛡️', tag:'STRESS RELIEF', price:50, priceGlow:'p-pink', short:'Peptid, ki ga raziskave povezujejo z uravnavanjem stresa in mirnejšim delovanjem živčevja.', full:'Selank (10 mg) je sintetični peptid, ki se v raziskavah preučuje zaradi vpliva na GABA-sistem, tesnobo in mentalno izčrpanost. Za razliko od klasičnih pomirjeval literatura ne opisuje močne zaspanosti ali omotičnosti. Vialka vsebuje 10 mg in je v katalogu uvrščena med višje enote te spojine. Kjer je laboratorijski test na voljo, odpreš originalno poročilo Janoshik in preveriš serijo sam. Namenjeno izključno raziskovalni uporabi.', testUrl:'https://verify.janoshik.com/tests/217117-NAcetyl_Selank_Amidate_YTK44PHQPXPS' },
+            { id:'mt1', name:'Melanotan-1 (MT-1)', sub:'Selektivni Melanin Agonist', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-mt1', emoji:'☀️', tag:'TAN & PROTECT', price:50, priceGlow:'p-rose', short:'Agonist melanokortinskih receptorjev, ki ga raziskave povezujejo s tvorbo temnejšega pigmenta.', full:'Melanotan-1 (MT-1) je raziskovalna spojina, ki deluje na melanokortinske receptorje. V literaturi se preučuje, ker spodbuja melanocite k tvorbi eumelanina, torej temnejšega kožnega pigmenta, ob manjši potrebi po ultravijolični svetlobi. Opisi v raziskavah govorijo o postopni in enakomernejši porjavelosti, ne o takojšnjem učinku. Ta stran ne daje navodil za uporabo, odmerkov ali izpostavljenosti soncu. Spojina je namenjena izključno raziskovalnim namenom. 18+.' }
         ];
         const reviews = [
             { name:"Rok Novak", stars:"★ ★ ★ ★ ★", rating:5, product:"BPC-157 (5mg) + TB-500 (5mg)", text:"Po mesecih bolečin v rami zaradi uteži se je zadeva po 3 tednih uporabe zrihtala. Top komunikacija na FB, odpošljeno takoj!" },
@@ -297,16 +317,16 @@
             if (e && e.target) e.target.classList.add('active');
             document.getElementById('product-grid').innerHTML = `
                 <div class="howto-panel">
-                    <div class="howto-head"><h2>Kako naročiti</h2><p>Trije koraki. Brez košarice, brez registracije — samo sporočilo.</p></div>
+                    <div class="howto-head"><h2>Kako naročiti?</h2><p>Trije koraki. Brez košarice, brez registracije — samo sporočilo.</p></div>
                     <div class="howto-steps">
                         <div class="howto-step s1" style="animation-delay:0.05s">
                             <div class="step-num">01</div><h3>Izberi izdelek</h3>
-                            <p>Odpri katalog, poglej opis in laboratorijski test. Ko veš kaj želiš, pojdi na korak 2.</p>
+                            <p>Odpri katalog, preberi opis in, kjer obstaja, odpri laboratorijski test. Ko veš, kaj želiš, pojdi na korak 2.</p>
                             <div class="howto-actions"><button class="howto-btn catalog" onclick="goToCatalog()">Poglej katalog</button></div>
                         </div>
                         <div class="howto-step s2" style="animation-delay:0.14s">
                             <div class="step-num">02</div><h3>Piši nam</h3>
-                            <p>Napiši ime izdelka. Odpre se direktni chat — izberi kanal, ki ti bolj paše.</p>
+                            <p>Napiši ime izdelka. Odpre se neposreden klepet — izberi kanal, ki ti bolj ustreza.</p>
                             <div class="howto-actions">
                                 <a href="${WA_CHAT}" class="howto-btn wa" onclick="return openWhatsApp(event)">WhatsApp</a>
                                 <a href="${FB_CHAT}" class="howto-btn msg" onclick="return openMessenger(event)">Messenger</a>
@@ -314,9 +334,41 @@
                         </div>
                         <div class="howto-step s3" style="animation-delay:0.23s">
                             <div class="step-num">03</div><h3>Plačilo + pošiljanje</h3>
-                            <p>Plačilo dogovorimo v sporočilu. Paket gre preko <strong style="color:#b9f6ca">Pošte Slovenije</strong>.</p>
+                            <p>Plačilo dogovorimo v sporočilu. Paket odpremimo s <strong style="color:#b9f6ca">Pošto Slovenije</strong>.</p>
                             <div class="howto-note">Pošiljanje po Sloveniji · hitra odprema po potrditvi</div>
                         </div>
+                    </div>
+                </div>`;
+            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function showAbout(e) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (e && e.target) e.target.classList.add('active');
+            document.getElementById('product-grid').innerHTML = `
+                <div class="about-panel">
+                    <div class="about-head">
+                        <h2>O nas</h2>
+                        <p>Iz Slovenije. Izbran katalog. Neposreden stik, brez hrupa.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat" style="animation-delay:0.05s"><strong>2026</strong><span>Začetek</span></div>
+                        <div class="about-stat" style="animation-delay:0.1s"><strong>SI</strong><span>Pošta Slovenije</span></div>
+                        <div class="about-stat" style="animation-delay:0.15s"><strong>8</strong><span>Izbranih spojin</span></div>
+                        <div class="about-stat" style="animation-delay:0.2s"><strong>LAB</strong><span>Janoshik testi</span></div>
+                    </div>
+                    <div class="about-card">
+                        <p>MIA LAB ni veletrgovina in ni naključni profil. Je ozek, izbran katalog raziskovalnih spojin. Odpreš opis, kjer je na voljo laboratorijski test, ga preveriš sam in nam v minuti napišeš. Brez registracije. Brez košarice. Brez petnajstih korakov.</p>
+                        <p>Delamo iz Slovenije. Odgovarjamo osebno, prek WhatsAppa ali Messengerja. Ko je naročilo potrjeno, paket odpremimo s Pošto Slovenije. Ne obljubljamo dostave čez noč. Obljubljamo jasen izbor, neposreden odgovor in pošiljanje po dogovoru.</p>
+                        <h3>Kdo smo</h3>
+                        <p>Začeli smo leta 2026, ker je večina katalogov v tem segmentu izgledala enako: predolgi seznami, brez testov in brez konkretnega stika. Šli smo v nasprotno smer. Manj izdelkov. Več preglednosti. Osebni odgovor namesto bota. Če česa ni na zalogi, to povemo. Če je, gre naročilo naprej.</p>
+                        <h3>Kaj delamo drugače</h3>
+                        <p>Katalog je namenoma kratek: trenutno osem izbranih spojin, razvrščenih po namenu. To so metabolizem, obnova tkiv, rastni hormon, fokus in estetika. Vsaka ima kratek opis, ceno in, kjer obstaja neodvisni laboratorijski test Janoshik, gumb do originalnega poročila. Poročila ne povzemamo. Odpreš ga sam.</p>
+                        <h3>Kako poteka stik</h3>
+                        <p>Naročilo in vprašanja gredo neposredno v sporočilo. Napišeš ime spojine. Dogovorimo se o zalogi, plačilu in naslovu. Pošiljamo po Sloveniji s Pošto Slovenije. Ni klicnega centra in ni čakalne vrste. Če pišeš, odgovorimo mi.</p>
+                        <p>Samo za raziskovalne namene. 18+. To ni zdravilo in ni prehransko dopolnilo. Informacije na strani so informativne. Kupec je odgovoren za skladnost z zakonodajo svoje države.</p>
+                    </div>
+                    <div class="about-back-wrap">
+                        <button type="button" class="about-back" onclick="goToCatalog()">NAZAJ</button>
                     </div>
                 </div>`;
             document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -324,7 +376,7 @@
         function goToCatalog() {
             const btn = document.querySelector('.filters .filter-btn');
             filterItems('vse', { target: btn });
-            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         function renderReviews() {
             document.getElementById('reviews-grid').innerHTML = reviews.map(r => {
