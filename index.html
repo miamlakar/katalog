@@ -48,6 +48,8 @@
         .filter-btn.howto-tab.active, .filter-btn.howto-tab:hover { background: linear-gradient(135deg, #b224ef, #4facfe); color: #fff; box-shadow: 0 0 25px rgba(178, 36, 239, 0.6); }
         .filter-btn.about-tab { background: rgba(255, 79, 139, 0.12); border-color: rgba(255, 79, 139, 0.5); color: #ff9fbc; }
         .filter-btn.about-tab.active, .filter-btn.about-tab:hover { background: linear-gradient(135deg, #ff4f8b, #ffb56b); color: #fff; box-shadow: 0 0 25px rgba(255, 79, 139, 0.55); }
+        .filter-btn.max-tab { background: rgba(214, 255, 58, 0.1); border-color: rgba(214, 255, 58, 0.55); color: #eaff6a; text-shadow: 0 0 10px rgba(214, 255, 58, 0.55); }
+        .filter-btn.max-tab.active, .filter-btn.max-tab:hover { background: linear-gradient(135deg, #d6ff3a, #7dffb0); color: #06100a; border-color: transparent; box-shadow: 0 0 28px rgba(214, 255, 58, 0.7); text-shadow: none; }
         .howto-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .howto-head { text-align: center; margin-bottom: 36px; }
         .howto-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 10%, #e9b3ff 50%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -70,6 +72,33 @@
         .howto-btn.msg { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 55%, #a5f3fc 100%); color: #041018; animation: skyGlow 2.6s ease-in-out infinite; }
         .howto-note { font-size: 0.78rem; color: #86efac; font-weight: 600; }
         @media (max-width: 900px) { .howto-steps { grid-template-columns: 1fr; } .howto-step { min-height: auto; } }
+        .max-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .max-head { text-align: center; margin-bottom: 32px; }
+        .max-head h2 { font-size: 2.15rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 8%, #eaff6a 48%, #7dffb0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .max-head p { color: var(--text-sub); font-size: 1.02rem; max-width: 680px; margin: 0 auto; line-height: 1.55; }
+        .max-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 32px; }
+        .max-pillar { background: var(--card-bg); border: 1px solid rgba(214, 255, 58, 0.22); border-radius: 20px; padding: 22px 20px; text-align: left; animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .max-pillar .max-num { margin-bottom: 10px; }
+        .max-pillar h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+        .max-pillar p { color: var(--text-sub); font-size: 0.9rem; line-height: 1.55; }
+        .proto-truth { margin: 4px 0 20px; padding: 14px 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(214,255,58,0.12), rgba(0,242,254,0.07)); border: 1px solid rgba(214,255,58,0.4); color: #eaff6a; font-weight: 800; font-size: 0.95rem; line-height: 1.45; text-align: center; text-shadow: 0 0 12px rgba(214,255,58,0.45); }
+        .max-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+        .max-card { background: var(--card-bg); border: 1px solid rgba(214, 255, 58, 0.22); border-radius: 22px; padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; text-align: left; cursor: pointer; width: 100%; color: inherit; font: inherit; }
+        .max-card:hover { transform: translateY(-5px); border-color: rgba(214, 255, 58, 0.7); box-shadow: 0 0 28px rgba(214, 255, 58, 0.28); }
+        .max-num { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.4px; width: auto; height: auto; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; color: #eaff6a; background: rgba(214, 255, 58, 0.12); border: 1px solid rgba(214, 255, 58, 0.5); animation: limePulse 2.4s ease-in-out infinite; padding: 4px 10px; align-self: flex-start; }
+        @keyframes limePulse { 0%, 100% { box-shadow: 0 0 10px rgba(214, 255, 58, 0.28); } 50% { box-shadow: 0 0 22px rgba(214, 255, 58, 0.75); } }
+        .max-card h3 { font-size: 1.18rem; font-weight: 800; color: #fff; }
+        .max-card p { color: var(--text-sub); font-size: 0.92rem; line-height: 1.55; flex-grow: 1; }
+        .max-cta { color: #eaff6a; font-weight: 800; font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; }
+        .max-note { margin-top: 22px; text-align: center; color: #94a3b8; font-size: 0.82rem; line-height: 1.5; }
+        .max-back { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; min-width: 200px; margin: 22px auto 0; padding: 12px 32px; border: none; border-radius: 30px; background: linear-gradient(135deg, #d6ff3a, #7dffb0); color: #06100a; font-weight: 800; font-size: 0.86rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 18px rgba(214, 255, 58, 0.5); animation: limePulse 2.4s ease-in-out infinite; }
+        .max-back:hover { transform: translateY(-2px) scale(1.03); }
+        .max-back-wrap { text-align: center; }
+        .proto-box { border-color: rgba(214, 255, 58, 0.75) !important; box-shadow: 0 0 70px rgba(214, 255, 58, 0.22), 0 0 28px rgba(0, 242, 254, 0.12) !important; max-width: 680px; }
+        .proto-sec { margin-bottom: 20px; padding: 16px 16px 14px; border-radius: 16px; background: rgba(214, 255, 58, 0.04); border: 1px solid rgba(214, 255, 58, 0.16); }
+        .proto-sec h3 { font-size: 0.78rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: #eaff6a; margin-bottom: 8px; text-shadow: 0 0 10px rgba(214, 255, 58, 0.45); }
+        .proto-sec p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.65; }
+        @media (max-width: 900px) { .max-head h2 { font-size: 1.7rem; } .max-pillars { grid-template-columns: 1fr; } }
         .about-panel { grid-column: 1 / -1; animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; max-width: 880px; margin: 0 auto; width: 100%; }
         .about-head { text-align: center; margin-bottom: 28px; }
         .about-head h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #fff 8%, #ff9fbc 48%, #ffb56b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -195,7 +224,7 @@
 </head>
 <body class="gate-locked">
     <div class="top-notice">
-        <span>⚡ NAROČILA & VPRAŠANJA DIREKTNO NA <span class="glow-msg">MESSENGER</span> / <span class="glow-wa">WHATSAPP</span></span>
+        <span>⚡ ŽELIŠ ZAČETI? PIŠI NA <span class="glow-msg">MESSENGER</span> / <span class="glow-wa">WHATSAPP</span> — TI SE POTRUDIŠ. MI DOSTAVIMO.</span>
         <span class="research-badge">FOR RESEARCH PURPOSES ONLY</span>
     </div>
     <div class="container">
@@ -207,8 +236,8 @@
             </div>
         </header>
         <section class="hero">
-            <h1>Izbrana Kolekcija</h1>
-            <p>Izberi spojino in odpri podroben opis. Za naročilo, zalogo ali vprašanje nam piši neposredno.</p>
+            <h1>Telo, ki ga hočeš, ne pride samo.</h1>
+            <p>Osem izbranih spojin. En klepet. In ena resnica, ki jo drugi zamolčijo: peptid naredi svoje šele takrat, ko ti narediš svoje. Spanec. Prehrana. Trening. Če tega nočeš — nisi naša stranka.</p>
             <div class="filters">
                 <button class="filter-btn active" onclick="filterItems('vse', event)">VSI IZDELKI</button>
                 <button class="filter-btn" onclick="filterItems('metabolizem', event)">METABOLIZEM</button>
@@ -217,6 +246,7 @@
                 <button class="filter-btn" onclick="filterItems('možgani', event)">FOKUS & SPOMIN</button>
                 <button class="filter-btn" onclick="filterItems('lepota', event)">KOŽA & ESTETIKA</button>
                 <button class="filter-btn howto-tab" onclick="showHowTo(event)">KAKO NAROČITI?</button>
+                <button class="filter-btn max-tab" onclick="showMaxTips(event)">MAX IZKORISTEK</button>
                 <button class="filter-btn about-tab" onclick="showAbout(event)">O NAS</button>
                 <button class="filter-btn lab-tab" onclick="showLabTests(event)">LABORATORIJSKI TESTI</button>
                 <button class="filter-btn reviews-tab" onclick="scrollToReviews()">⭐ OCENE (4.9★)</button>
@@ -225,8 +255,8 @@
         <div class="grid" id="product-grid"></div>
         <section class="reviews-section" id="reviews-container">
             <div class="reviews-header">
-                <h2>Mnenja Uporabnikov</h2>
-                <div class="reviews-summary"><span class="stars-gold">★ ★ ★ ★ ★</span><span><strong>4.9</strong> / 5.0 (Preverjene stranke)</span></div>
+                <h2>Kdor se potrudi, vidi.</h2>
+                <div class="reviews-summary"><span class="stars-gold">★ ★ ★ ★ ★</span><span><strong>4.9</strong> / 5.0 · stranke, ki niso čakale čudeža — ampak so delale</span></div>
             </div>
             <div class="grid" id="reviews-grid"></div>
         </section>
@@ -253,17 +283,31 @@
             <a href="https://m.me/miamlakarr" id="modal-order-btn" class="modal-fb-btn" onclick="openMessenger(event, currentProductName)">⚡ Naroči zdaj</a>
         </div>
     </div>
+    <div class="modal" id="protocol-modal">
+        <div class="modal-box proto-box">
+            <button class="close-btn" onclick="closeProtocol()">✕</button>
+            <div class="modal-cat" id="p-cat">MAX IZKORISTEK</div>
+            <h2 class="modal-title" id="p-title"></h2>
+            <div class="modal-sub" id="p-sub"></div>
+            <div class="proto-truth">Če se nočeš potruditi — spanec, prehrana, trening — peptid nima na čem delati. To ni bližnjica. To je prednost za tiste, ki delajo.</div>
+            <div class="proto-sec"><h3>01 · Spanec — pogoj</h3><p id="p-recon"></p></div>
+            <div class="proto-sec"><h3>02 · Prehrana — gorivo</h3><p id="p-store"></p></div>
+            <div class="proto-sec"><h3>03 · Trening — dražljaj</h3><p id="p-max"></p></div>
+            <p class="max-note" style="margin: 0 0 18px; text-align: left;">Brez dela ni izkoristka. Samo za raziskovalne namene. 18+. To ni zdravilo in ni navodilo za uporabo pri ljudeh.</p>
+            <a href="https://m.me/miamlakarr" id="protocol-order-btn" class="modal-fb-btn" onclick="openMessenger(event, currentProductName)">⚡ Naroči zdaj</a>
+        </div>
+    </div>
     <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
         <div class="age-gate-box">
             <div class="age-18">18+</div>
             <div class="age-research">FOR RESEARCH PURPOSES ONLY</div>
-            <h2 id="age-title">Vstop v katalog</h2>
-            <p>Stran je namenjena osebam, starim 18 let ali več. Vsebina je izključno za raziskovalne namene.</p>
+            <h2 id="age-title">Samo za tiste, ki vedo, kaj hočejo</h2>
+            <p>18+. Izključno raziskovalni nameni. To ni zdravilo in ni čudež v prahu. Če hočeš maksimalen izkoristek, se boš moral potruditi — spanec, prehrana, trening. Če iščeš bližnjico brez dela — zavrni. Če si pripravljen delati na sebi — vstopi.</p>
             <div class="age-actions">
                 <button type="button" class="age-enter" onclick="enterSite()">VSTOPI</button>
                 <button type="button" class="age-leave" onclick="denySite()">ZAVRNI</button>
             </div>
-            <div class="age-denied" id="age-denied">Dostop zavrnjen. Stran je samo za osebe 18+ in raziskovalno uporabo.</div>
+            <div class="age-denied" id="age-denied">Dostop zavrnjen. Ta katalog ni za otroke in ni za tiste, ki iščejo rezultat brez spanca, prehrane in treninga.</div>
         </div>
     </div>
     <script>
@@ -301,22 +345,64 @@
             return false;
         }
         const catalog = [
-            { id:'retatrutide-20mg', name:'Retatrutide (20mg)', sub:'Triple Agonist (GLP-1 / GIP / Glucagon)', category:'metabolizem', catLabel:'Metabolizem & Oksidacija', glowClass:'v-retatrutide', emoji:'⚡', tag:'20MG HIGH DOSE', price:130, priceGlow:'p-cyan', short:'Trojni agonist receptorjev GLP-1, GIP in glukagona za raziskave apetita in porabe energije.', full:'Retatrutide (20 mg) je raziskovalna spojina iz skupine trojnih agonistov. V literaturi se preučuje sočasno delovanje na receptorje GLP-1, GIP in glukagona, ki so povezani z uravnavanjem apetita, občutkom sitosti in porabo energije iz maščobnih zalog. Vialka vsebuje 20 mg liofilizirane spojine in spada v višji raziskovalni razred tega kataloga. Identiteto serije preveriš sam: odpreš originalno poročilo Janoshik in primerjaš oznako. Opis je informativen. Spojina ni zdravilo, ni prehransko dopolnilo in ni namenjena uporabi pri ljudeh.', testUrl:'https://verify.janoshik.com/tests/207720-Retatrutide_FGQ7YHK3UTB3' },
-            { id:'bpc-tb-blend', name:'BPC-157 (5mg) + TB-500 (5mg)', sub:'Ultimate Recovery Blend (10mg Total)', category:'obnova', catLabel:'Obnova Kit & Sklepov', glowClass:'v-bpc', emoji:'🧬', tag:'DUAL STACK', price:50, priceGlow:'p-emerald', short:'Dve raziskovalni spojini v eni vialki, namenjeni preučevanju obnove kit, vezi in sklepov.', full:'Mešanica združuje BPC-157 (5 mg) in TB-500 (5 mg), skupaj 10 mg v eni vialki. BPC-157 se v raziskavah preučuje zaradi lokalnega vpliva na obnovo tkiva in tvorbo novega žilja. TB-500 se preučuje zaradi širšega, sistemskega vpliva na mišice, kite in vezivno tkivo. V literaturi ju pogosto obravnavajo skupaj, ker naj bi se dopolnjevali: ena spojina bolj lokalno, druga bolj po telesu. Katalog ju zato vodi kot en izdelek za raziskave gibalnega aparata. Ni zdravilo in ni namenjeno uporabi pri ljudeh ali živalih.' },
-            { id:'cjc-ipamorelin', name:'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)', sub:'Synergistic GH Secretagogue Blend', category:'rast', catLabel:'Rastni Hormon & Vitalnost', glowClass:'v-cjc', emoji:'🔥', tag:'GH POWER STACK', price:50, priceGlow:'p-gold', short:'Dva sekretagoga v eni vialki za raziskave pulznega sproščanja rastnega hormona.', full:'CJC-1295 brez DAC (5 mg) in ipamorelin (5 mg) sta v isti vialki. Obe spojini se v raziskavah preučujeta kot spodbujevalki sproščanja rastnega hormona. Ipamorelin velja za selektivnejši sekretagog, CJC-1295 brez DAC pa za krajše, pulzno delovanje, brez podaljšanega DAC-veziva. V literaturi ju pogosto omenjajo skupaj, ker naj bi se dopolnjevala in sprožala krajše pulze, ne pa stalno povišane ravni. Raziskave ju povezujejo tudi s sestavo telesa in hitrostjo obnove. Kjer je test na voljo, odpreš originalno poročilo. Samo za raziskovalne namene.', testUrl:'https://verify.janoshik.com/tests/147198-Ipamorelin_CEZPU4V1UM5Z' },
-            { id:'ghkcu-100mg', name:'GHK-Cu (100mg)', sub:'Bakrov Tripeptid-1 High-Potency', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-ghk', emoji:'✨', tag:'100MG MEGA DOSE', price:70, priceGlow:'p-blue', short:'Bakrov tripeptid visoke koncentracije za raziskave kolagena, kože in lasnih mešičkov.', full:'GHK-Cu (100 mg) je bakrov tripeptid v visoki koncentraciji. V raziskavah ga obravnavajo kot signalno molekulo za obnovo tkiva: preučujejo vpliv na nastajanje kolagena, elastina in hialuronske kisline ter na teksturo kože. Literatura ga povezuje tudi z lasnimi mešički in splošnim videzom kože. Vialka vsebuje 100 mg, zato je v katalogu uvrščena med močnejše enote. Laboratorijsko poročilo odpreš sam in preveriš serijo. Namenjeno izključno raziskovalni uporabi.', testUrl:'https://verify.janoshik.com/tests/95743-GHKCU_100mg_9SMFNQGB84WF' },
-            { id:'klow-80mg', name:'KLOW (80mg)', sub:'Ultra Complex Beauty Blend', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-klow', emoji:'👑', tag:'PREMIUM COMPLEX', price:130, priceGlow:'p-violet', short:'Izbrana lepotna mešanica za raziskave teksture kože, hidracije in celične zaščite.', full:'KLOW (80 mg) je kompleksna mešanica v sklopu kože in estetike. Namenjena je raziskavam, povezanim z videzom kože, globljo hidracijo in zaščito pred oksidativnim stresom. Sestava je pripravljena kot ena vialka z 80 mg, ne kot dolg seznam ločenih izdelkov. Neodvisno laboratorijsko poročilo odpreš na povezavi in preveriš serijo sam. To ni kozmetika za domačo uporabo in ni zdravilo. Opis ne obljublja rezultata.', testUrl:'https://verify.janoshik.com/tests/207724-KLOW_JZP3GPTXE5IG' },
-            { id:'semax-5mg', name:'Semax (5mg)', sub:'Kognitivni Heptapeptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-semax', emoji:'🧠', tag:'BDNF BOOST', price:50, priceGlow:'p-purple', short:'Heptapeptid, ki ga raziskave povezujejo z BDNF, pozornostjo in mentalno jasnostjo.', full:'Semax (5 mg) je sintetični heptapeptid, ki ga literatura uvršča med nootropne raziskovalne spojine. Preučuje se zaradi vpliva na BDNF, beljakovino, povezano z učenjem, pomnjenjem in nevroplastičnostjo. V študijah ga povezujejo z boljšo pozornostjo, jasnejšim razmišljanjem in mirnejšo odzivnostjo pod obremenitvijo, brez značilnega padca, ki ga poznamo pri kofeinu. Vialka vsebuje 5 mg. Opis je informativen in ne vključuje navodil za uporabo. Samo za raziskovalne namene.' },
-            { id:'selank-10mg', name:'Selank (10mg)', sub:'Anksiolitični Peptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-selank', emoji:'🛡️', tag:'STRESS RELIEF', price:50, priceGlow:'p-pink', short:'Peptid, ki ga raziskave povezujejo z uravnavanjem stresa in mirnejšim delovanjem živčevja.', full:'Selank (10 mg) je sintetični peptid, ki se v raziskavah preučuje zaradi vpliva na GABA-sistem, tesnobo in mentalno izčrpanost. Za razliko od klasičnih pomirjeval literatura ne opisuje močne zaspanosti ali omotičnosti. Vialka vsebuje 10 mg in je v katalogu uvrščena med višje enote te spojine. Kjer je laboratorijski test na voljo, odpreš originalno poročilo Janoshik in preveriš serijo sam. Namenjeno izključno raziskovalni uporabi.', testUrl:'https://verify.janoshik.com/tests/217117-NAcetyl_Selank_Amidate_YTK44PHQPXPS' },
-            { id:'mt1', name:'Melanotan-1 (MT-1)', sub:'Selektivni Melanin Agonist', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-mt1', emoji:'☀️', tag:'TAN & PROTECT', price:50, priceGlow:'p-rose', short:'Agonist melanokortinskih receptorjev, ki ga raziskave povezujejo s tvorbo temnejšega pigmenta.', full:'Melanotan-1 (MT-1) je raziskovalna spojina, ki deluje na melanokortinske receptorje. V literaturi se preučuje, ker spodbuja melanocite k tvorbi eumelanina, torej temnejšega kožnega pigmenta, ob manjši potrebi po ultravijolični svetlobi. Opisi v raziskavah govorijo o postopni in enakomernejši porjavelosti, ne o takojšnjem učinku. Ta stran ne daje navodil za uporabo, odmerkov ali izpostavljenosti soncu. Spojina je namenjena izključno raziskovalnim namenom. 18+.' }
+            { id:'retatrutide-20mg', name:'Retatrutide (20mg)', sub:'Triple Agonist (GLP-1 / GIP / Glucagon)', category:'metabolizem', catLabel:'Metabolizem & Oksidacija', glowClass:'v-retatrutide', emoji:'⚡', tag:'20MG HIGH DOSE', price:130, priceGlow:'p-cyan', short:'Apetit, ki ti ukazuje. Teža, ki se vrača. Trojni agonist za tiste, ki so se odločili, da tokrat ne odnehajo.', full:'Retatrutide 20 mg ni še ena vialka v vrsti. Je trojni agonist — GLP-1, GIP in glukagon — spojina, ki jo literatura preučuje tam, kjer se lomi apetit, sitost in poraba energije iz zalog. Če si že predolgo gledal, kako te telo vleče nazaj k stari teži, veš, zakaj si tukaj. To je višji raziskovalni razred tega kataloga. Serijo preveriš sam na Janoshik. In zdaj resnica, ki jo drugi zamolčijo: peptid ti lahko utiša hrepenenje. Ne more pa spati namesto tebe, izbrati krožnika namesto tebe in dvigniti uteži namesto tebe. Če spiš slabo, ješ kaos in ne treniraš, nimaš izkoristka. Imaš izgovor v steklenički. To ni čarovnija. To je orodje. Orodje za tiste, ki so pripravljeni delati na sebi. Ni zdravilo, ni prehransko dopolnilo in ni namenjeno uporabi pri ljudeh.', testUrl:'https://verify.janoshik.com/tests/207720-Retatrutide_FGQ7YHK3UTB3' },
+            { id:'bpc-tb-blend', name:'BPC-157 (5mg) + TB-500 (5mg)', sub:'Ultimate Recovery Blend (10mg Total)', category:'obnova', catLabel:'Obnova Kit & Sklepov', glowClass:'v-bpc', emoji:'🧬', tag:'DUAL STACK', price:50, priceGlow:'p-emerald', short:'Ko bolečina že predolgo kradne treninge. Dve spojini. Ena vialka. Obnova, ki jo vzameš resno — ali pa je ne vzameš.', full:'Mešanica BPC-157 (5 mg) in TB-500 (5 mg) ni tolažba za tiste, ki so se sprijaznili z bolečino. Je 10 mg v eni vialki za raziskave obnove kit, vezi, mišic in sklepov. BPC v literaturi cilja bolj lokalno. TB-500 širše, po telesu. Skupaj ju vodimo, ker se dopolnjujeta — če ti dopolnjuješ z delom. Rama se ne zaceli na Instagramu. Zaceli se, ko daš telesu spanec, beljakovine in pameten počitek. Če spiš 4 ure, trezno ne ješ in treniraš skozi vnetje, si kupil zgodbo, ne izkoristka. Želeni rezultat pride k tistim, ki se potrudijo, ko boli — in k tistim, ki znajo tudi počivati. Ni zdravilo in ni namenjeno uporabi pri ljudeh ali živalih.' },
+            { id:'cjc-ipamorelin', name:'CJC-1295 no DAC (5mg) + Ipamorelin (5mg)', sub:'Synergistic GH Secretagogue Blend', category:'rast', catLabel:'Rastni Hormon & Vitalnost', glowClass:'v-cjc', emoji:'🔥', tag:'GH POWER STACK', price:50, priceGlow:'p-gold', short:'Za tiste, ki nočejo samo izgledati pripravljeni. Hočejo to tudi biti. Pulz. Obnova. Vitalnost. Če spiš, ješ in dviguješ.', full:'CJC-1295 brez DAC (5 mg) in ipamorelin (5 mg) v isti vialki. Dva sekretagoga, ki ju raziskave preučujejo kot par za pulzno sproščanje rastnega hormona — kratko, čisto, brez podaljšanega DAC-veziva. Literatura ju povezuje s sestavo telesa, obnovo in občutkom, da si znova vklopljen. Ampak pulz ponoči potrebuje noč. Če hropi, piješ pred spanjem in skipaš treninge, vialka ne naredi čudeža. To je skladba za tiste, ki trenirajo težko, spijo, kot da mislijo resno, in jedo, kot da gradijo telo — ne kot da se kaznujejo. Kjer je test, odpreš originalno poročilo. Maksimalni izkoristek ni v viali. Je v tvoji postelji, na krožniku in pod palico. Samo za raziskovalne namene. Ni zdravilo.', testUrl:'https://verify.janoshik.com/tests/147198-Ipamorelin_CEZPU4V1UM5Z' },
+            { id:'ghkcu-100mg', name:'GHK-Cu (100mg)', sub:'Bakrov Tripeptid-1 High-Potency', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-ghk', emoji:'✨', tag:'100MG MEGA DOSE', price:70, priceGlow:'p-blue', short:'Koža, ki govori namesto tebe. Bakrov tripeptid visoke moči za tiste, ki videz vzamejo osebno — in ga tudi vzdržujejo.', full:'GHK-Cu 100 mg ni krema z obljubo v oglasu. Je bakrov tripeptid visoke koncentracije, ki ga raziskave povezujejo s kolagenom, elastinom, hialuronom in teksturo kože — in z lasnimi mešički. Vialka je v katalogu zato, ker je resna enota, ne vzorec. Serijo preveriš sam na Janoshik. Resnica, ki boli: 4 ure sna, alkohol in sonce brez zaščite naredijo več škode, kot jo peptid lahko pokrije. Če hočeš, da se vidi, delaj, kot da se vidi. Spanec. Voda. Krožnik. Zaščita. Doslednost. GHK-Cu je prednost. Tvoje navade so temelj. Brez temelja je vse samo steklenička. Namenjeno izključno raziskovalni uporabi. Ni kozmetika za čudež čez noč.', testUrl:'https://verify.janoshik.com/tests/95743-GHKCU_100mg_9SMFNQGB84WF' },
+            { id:'klow-80mg', name:'KLOW (80mg)', sub:'Ultra Complex Beauty Blend', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-klow', emoji:'👑', tag:'PREMIUM COMPLEX', price:130, priceGlow:'p-violet', short:'Ne še ena krema. Kompleks za tiste, ki hočejo, da se razlika vidi — in so pripravljeni zanjo tudi delati.', full:'KLOW 80 mg je kompleks, ne igrača. V sklopu kože in estetike: tekstura, hidracija, zaščita pred oksidativnim stresom — vse v eni viali, ne na dolgem seznamu. To je izbira za tiste, ki nočejo zbirati desetih stekleničk, ampak eno, ki jo vzamejo resno. Neodvisni test odpreš sam. Ampak sijaj ne pride iz viale, če spiš slabo, piješ sladko in kožo pečeš, kot da je nepremagljiva. KLOW je prednost. Tvoje navade so motor. Spanec. Prehrana. Gibanje. Zaščita. Če tega nočeš, kupuješ embalažo. Če to živiš, ima kompleks smisel. To ni kozmetika za domačo čarovnijo in ni zdravilo. Opis ne obljublja rezultata tistim, ki ne delajo.', testUrl:'https://verify.janoshik.com/tests/207724-KLOW_JZP3GPTXE5IG' },
+            { id:'semax-5mg', name:'Semax (5mg)', sub:'Kognitivni Heptapeptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-semax', emoji:'🧠', tag:'BDNF BOOST', price:50, priceGlow:'p-purple', short:'Ko mora glava biti ostra. Brez tresenja. Brez padca. Samo jasnost — če si jo pripravljen izkoristiti z delom.', full:'Semax 5 mg je heptapeptid, ki ga literatura uvršča med nootropne raziskovalne spojine. Preučuje se zaradi BDNF — beljakovine, povezane z učenjem, pomnjenjem in nevroplastičnostjo. V študijah ga povezujejo z boljšo pozornostjo in mirnejšo ostrino pod obremenitvijo, brez klasičnega kofeinskega padca. Ampak Semax ne napiše izpita, ne odpre knjige in ne ugasne telefona. Če spiš 3 ure in pričakuješ genija, si kupil meglo z boljšim oglasom. Fokus je vaja. Spojina je veter v jadro. Jadro moraš imeti: spanec, čist krožnik, globoko delo, telo, ki se giblje. Če se nočeš potruditi, ne pričakuj ostre glave. Opis je informativen. Samo za raziskovalne namene. Ni zdravilo.' },
+            { id:'selank-10mg', name:'Selank (10mg)', sub:'Anksiolitični Peptid', category:'možgani', catLabel:'Fokus & Spomin', glowClass:'v-selank', emoji:'🛡️', tag:'STRESS RELIEF', price:50, priceGlow:'p-pink', short:'Mir, ki ni omotica. Za tiste, ki hočejo ostati ostri — tudi ko pritisk raste. Ampak mir se vzame. Ne čaka.', full:'Selank 10 mg ni tableta za pobeg. Je sintetični peptid, ki se v raziskavah preučuje zaradi vpliva na GABA-sistem, tesnobo in mentalno izčrpanost — brez značilne zaspanosti klasičnih pomirjeval. Vialka je višja enota te spojine. Kjer je Janoshik, ga odpreš sam. Resnica: Selank ti ne uredi življenja. Ne ugasne kaosa, ki ga vsak dan hraniš s kofeinom, 4 urami sna in telefonom v postelji. Mir se vzame. S spancem. S prehrano. S telesom, ki izpusti napetost. Šele potem ima spojina prostor, da naredi svoje. Če se nočeš potruditi, ne pričakuj, da bo vialka. Namenjeno izključno raziskovalni uporabi. Ni terapija in ni zdravilo.', testUrl:'https://verify.janoshik.com/tests/217117-NAcetyl_Selank_Amidate_YTK44PHQPXPS' },
+            { id:'mt1', name:'Melanotan-1 (MT-1)', sub:'Selektivni Melanin Agonist', category:'lepota', catLabel:'Koža & Estetika', glowClass:'v-mt1', emoji:'☀️', tag:'TAN & PROTECT', price:50, priceGlow:'p-rose', short:'Barva, ki pride z disciplino. Ne čez noč. Ne za nestrpne. Za tiste, ki počakajo — spijo, pijejo vodo in izgledajo.', full:'Melanotan-1 ni filter in ni instant. Je raziskovalna spojina na melanokortinskih receptorjih, ki jo literatura povezuje s tvorbo eumelanina — temnejšega pigmenta — ob manjši potrebi po ultravijolični svetlobi. Opisi govorijo o postopni, enakomernejši barvi, ne o čudežu čez vikend. Če si nestrpen, si na napačnem mestu. Če si dosleden — spanec, voda, pamet, čas, telo, ki se giblje — ima to smisel. Ta stran ne daje odmerkov, časov na soncu in receptov za pečenje. Barva pride k tistim, ki počakajo in delajo, ko drugi že obupajo. Spojina je namenjena izključno raziskovalnim namenom. 18+. Ni zdravilo. Kupec prevzema odgovornost.' }
         ];
+        const protocols = {
+            'retatrutide-20mg': {
+                recon: 'Retatrutide v raziskavah cilja apetit, sitost in porabo energije. Ampak telo, ki spi 5 ur, se brani, kot da je lakota za vogalom: hrepenenje gre gor, disciplina pade, sladko postane glasnejše od vsake spojine. Hočeš maksimalen izkoristek? 7 do 9 ur. Isti čas vsako noč. Temna, hladnejša soba. Telefon ven iz postelje. Brez alkohola pred spanjem. Brez še ene epizode do tretje ure. Če tega nočeš narediti, ne kupuj iluzije. Peptid ne more spati namesto tebe. Spanec ni nasvet. Spanec je pogoj. Brez njega nimaš rezultata — imaš samo viali.',
+                store: 'Spojina ti lahko utiša hrepenenje. Krožnik ostane tvoj. Visoke beljakovine ob vsakem obroku — da ob primanjkljaju ne požreš mišice. Zelena. Vlaknine. Dovolj vode, da nisi lažen lačen. Kalorijski primanjkljaj, ki ga zmoreš držati tedne, ne 48-urna kazen in potem pica. Sladko, alkohol in nočno žretje ubijejo izkoristek hitreje, kot ga peptid zgradi. Jej kot nekdo, ki gradi telo, ne kot nekdo, ki se kaznuje. Če čisto prehrano opustiš ob prvem vikendu, nisi izkoristil peptida. Izkoristil si izgovor. Disciplina je vsak obrok. Ne občasni post.',
+                max: 'Maščoba lahko pade. Mišica ostane samo, če jo zahtevaš. 3 do 5 treningov z obremenitvijo na teden — noge, hrbet, potisk, vleka. Hoja vsak dan. Ne kaznovalni kardio do izčrpanosti. Retatrutide ni nadomestilo za delo. Je ojačevalec tistega, kar že delaš. Če ne treniraš, ne spiš in ješ, kar ti pade pod roko, bo rezultat takšen, kot si ga zaslužil: prazen. Potrudi se. Ali pusti pri miru. Tretje možnosti ni. Želeni rezultat pride k tistim, ki dvigujejo, hodijo in se vrnejo, ko je težko — ne k tistim, ki čakajo, da vialka naredi vse.'
+            },
+            'bpc-tb-blend': {
+                recon: 'Tkiva se ne obnavljajo na Instagramu. Obnavljajo se ponoči. 8 ur. Temno. Tiho. Hladno. Če spiš slabo in pričakuješ, da se rama, koleno ali kita sama umirita, se motiš. BPC-157 in TB-500 v raziskavah ciljata obnovo — ampak telo rabi spanec kot tovarno. Brez tovarne ni izdelka. To ni opcijsko. To je prvi korak. Alkohol pred spanjem, ekran do zore in 4 ure sna so sabotaža. Če hočeš, da se zaceli, daj noči tisto, kar ji pripada. Peptid ne spi namesto tebe.',
+                store: 'Obnova žre beljakovine. Vsak obrok. Dovolj kalorij, da ima telo s čim delati — stradanje med poškodbo ni disciplina, je sabotiranje. Voda. Kolagen iz hrane, ne samo iz vrečke. Barva na krožniku. Če vikend piješ in med tednom trezno zdraviš, ne pričakuj čistega tkiva. Krožnik je del protokola. Enako kot vialka. Jej, kot da rabiš tkivo, ki se zapre — ker ga rabiš. Brez goriva ni obnove. To je tako preprosto in tako težko.',
+                max: 'Peptid ni dovoljenje za osebni rekord, ker te manj boli. Pametna obremenitev. Mobilnost. Počitek. Rehabilitacija JE trening. Če dodaš volumen, ker se počutiš nepremagljivo, si lahko nazaj na začetku. Potrudi se — a pametno. Želeni rezultat pride, ko telo dobi dražljaj in čas, da se zapre. Hoja. Nadzorovan obseg. Brez ega. Če nočeš počivati, ne pričakuj, da se zaceli. Če nočeš delati na gibljivosti, ne pričakuj, da te vialka reši. Delo plus počitek. Tam je izkoristek.'
+            },
+            'cjc-ipamorelin': {
+                recon: 'Rastni hormon ima nočni pulz. To ni podrobnost. To je protokol. 7 do 9 ur, isti ritem, brez alkohola pred spanjem, brez ekrana do druge ure. Če hropi, skipaš noči in nadoknadiš ob vikendu, izkoristek pade, preden se sploh začne. CJC-1295 in ipamorelin v raziskavah ciljata pulz. Ti ga lahko uničiš z enim slabim spancem. Ali ga podpreš z ritualom, ki ga držiš, ko te nihče ne gleda. Izberi. Spanec je tu polovica formule. Druga polovica si ti.',
+                store: 'Beljakovine. Ne prazna postelja in sladkor ob enajstih zvečer. Ne ekstremno stradanje, ki ugasne vse, kar hočeš spodbuditi. Jej kot nekdo, ki gradi telo — ne kot nekdo, ki se kaznuje. Voda čez dan. Doslednost. Zadnji obrok naj ne bo kaos. Peptid ne kuha. Ti kuhaš. Če tega nočeš, vialka nima smisla. Maksimalni izkoristek te spojine živi na krožniku: meso, jajca, mleko, zelenjava, dovolj, da ima telo s čim delati ponoči.',
+                max: 'Težke osnovne vaje. Progresija. Počitek. Sekretagoga v viali ne dvigujejo mrtvega dviga namesto tebe. Če hočeš sestavo telesa, vitalnost, občutek, da si vklopljen — mora biti dražljaj. Kavč plus peptid je draga navada. Trening plus spanec plus hrana plus spojina je sistem. Sistem zmaga. 3 do 5 resnih treningov. Spanec kot trening. Krožnik kot trening. Ti se potrudi. Ali ne pričakuj ničesar. Tretje možnosti ni.'
+            },
+            'ghkcu-100mg': {
+                recon: 'Koža se popravlja, ko spiš. Ne ko scrollaš. 7 do 9 ur. Vrečke, sivo lice, vnetje — to pogosto ni manko peptida. To je dolg. GHK-Cu v raziskavah cilja kolagen, elastin, teksturo. Ampak nočna obnova je tvoja. Če spiš 4 ure in pričakuješ steklen ten, se goljufaš. Najprej ugasni luč. Potem se pogovarjava o izkoristku. Telefon ven. Sobna tema. Isti čas vsako noč. Koža, ki nikoli ne ugasne, ostane siva. To ni krivda viale. To je tvoja noč.',
+                store: 'Kolagen se ne rodi iz sladkega. Beljakovine. Vitamin C. Cink. Voda, dokler koža ni več papir. Alkohol in sladkor delata nasprotno od tistega, kar iščeš. GHK-Cu ni filter. Če hočeš, da se vidi, jej, kot da se vidi. Vsak dan. Ne od ponedeljka. Od zdaj. Dehidrirana koža izgleda starejša, peptid ali ne. Jej barvo. Jej beljakovine. Jej mirno. To je dolgočasno. Dolgočasno deluje. Nestrpnost ne.',
+                max: 'Zaščita pred soncem. Vsak dan. Ne kaditi. Dosledna nega. Gibanje za pretok, ne kaznovanje. Hoja. Dvigovanje. Kri mora teči. GHK-Cu ne izbriše desetletja sonca v dveh tednih. Če se pečeš, spiš slabo in uporabljaš peptid, bo koža povedala resnico. Potrudi se tam, kjer te nihče ne gleda: spanec, krožnik, senca, voda. Tam se zgodi izkoristek. Če nočeš tega, ne pričakuj, da te bo ogledalo lagalo.'
+            },
+            'klow-80mg': {
+                recon: 'Sijaj, ki ga hočeš, se naredi ponoči. 7 do 9 ur, isti ritem, telefon stran. KLOW je kompleks za teksturo, hidracijo, zaščito — ampak koža, ki nikoli ne ugasne, ostane siva. Če spiš slabo in zjutraj iščeš krivca v viali, si zgrešil tarčo. Najprej spanec. Potem vse ostalo. Temna soba. Brez alkohola pred spanjem. To ni beauty hack. To je pogoj. Če nočeš spati, ne pričakuj, da te kompleks reši.',
+                store: 'Hidracija ni voda ob kavi. Je voda čez dan, solzno malo sladkega, še manj alkohola. Jej beljakovine, barvo s krožnika, ne iz vrečke. Crash dieta, ki ti sesede obraz, ni disciplina. Je sabotaža. KLOW ne napolni tistega, kar ti izprazniš s sladkim in dehidracijo. Krožnik je tvoje ogledalo. Če hočeš, da se vidi, jej, kot da se vidi. Vsak dan. Ne občasno. Maksimalni izkoristek te formule se začne tam, kjer misliš, da nima veze: na krožniku.',
+                max: 'Doslednost. Nega. Gibanje. Ne 12 novih izdelkov in nobene navade. Kompleks ima smisel, če ti držiš sistem: spanec, prehrana, trening ali vsaj hoja, zaščita pred soncem. Če hočeš, da se razlika vidi, se moraš potruditi, ko te nihče ne gleda. KLOW je prednost. Ti si motor. Brez motorja je samo steklenička. Želeni rezultat ni filter. Je navada. Če se nočeš potruditi, ne pričakuj, da te bodo vprašali, kaj delaš. Ker se ne bo videlo.'
+            },
+            'semax-5mg': {
+                recon: 'Možgani brez spanca niso fokusirani. So v preživetju. Semax v raziskavah povezujejo z BDNF, pozornostjo, jasnostjo. Ampak nootrop na 3 urah sna pred izpitom ni prednost — je pretvarjanje. 7 do 9 ur. Ritem. Brez še ene epizode. Telefon ven iz postelje. Če nočeš spati, ne pričakuj ostre glave. Peptid ne spi namesto tebe. Maksimalni izkoristek Semaxa se začne, ko ugasneš luč — ne ko odpreš viali.',
+                store: 'Stabilna energija. Ne šest kav in nič hrane. Voda. Beljakovine. Ne sladkorne smrti vsaki dve uri. Semax ni kofein. Če ga zložiš na kaos, dobiš tresečo jasnost — ali pa nič. Jej, kot da rabiš možgane za osem ur, ne za dvajset minut. To je izkoristek. Ostalo je šum. Alkohol in nočno žretje ukradeta jutranjo ostrino hitreje, kot jo spojina vrne. Krožnik je del fokusa. Če tega nočeš slišati, nisi pripravljen na rezultat.',
+                max: 'Globoko delo. Telefon v drugi sobi. Sprehod. Telo, ki se giblje, možganom da pretok. Semax ne napiše naloge, ne naredi treninga in ne odpre knjige. Odstrani meglo — če si jo pripravljen izkoristiti. Če boš še naprej scrollal, si kupil občutek, ne rezultat. Potrudi se. Fokus je vaja. Spojina je samo veter v jadro. Jadro moraš imeti: spanec, hrana, delo, gibanje. Brez tega je Semax samo ime na viali.'
+            },
+            'selank-10mg': {
+                recon: 'Tesnoba in spanec sta ista vojna. Če se ponoči bojuješ s telefonom, zjutraj nisi samo utrujen — si pripravljen na razpad. 7 do 9 ur. Ritual. Temna soba. Isti čas. Selank v raziskavah cilja mirnejši odziv. Ampak živčevje, ki nikoli ne ugasne, nima kam iti. Daj mu noč. Ali pusti, da te požre dan. Tretje možnosti ni. Maksimalni izkoristek te spojine se začne, ko se ti zares ugasneš. Ne ko odpreš viali in ostaneš na ekranu.',
+                store: 'Kofein na robu ni pogum. Je bencin na ogenj. Redni obroki. Voda. Alkohol za umiritev je past, ki ukrade spanec in ti zjutraj vrne dvojno. Jej mirno, da lahko si miren. Selank ni terapija. Je del sistema. Sistem se začne na krožniku. Če tam kaosa ne ugasneš, ga spojina ne bo. Stabilna kri. Manj sladkega. Manj kaosa. To ni dieta za Instagram. To je gorivo za živčevje, ki ga hočeš umiriti.',
+                max: 'Hoja. Dvigovanje. Dihanje. Ne samo še en HIIT, ko si že zgorel. Telo mora izpustiti napetost, ne je še dodatno pretepati. Selank ti ne uredi življenja. Ti urediš dan, spanec, trening — in šele potem ima spojina prostor, da naredi svoje. Potrudi se. Mir se vzame. Ne čaka. Če nočeš delati na sebi, ne pričakuj, da bo vialka. Želeni rezultat pride, ko telo dobi ritem: noč, krožnik, gibanje. Tam Selank ni več samo ime. Tam ima smisel.'
+            },
+            'mt1': {
+                recon: 'Barva, ki jo hočeš, se ne zgodi ob četrti uri zjutraj na ekranu. Koža se obnavlja ponoči. 7 do 9 ur. Dehidrirana, nespečna koža ne sprejme enakomerno ničesar. Melanotan-1 v raziskavah povezujejo s tvorbo temnejšega pigmenta. Ti to povezuješ s spancem. Ali pa ne. Potem ne jamraj nad izkoristkom, ki ga nisi niti poskusil. Isti ritem. Temna soba. Telefon ven. Barva pride k tistim, ki počakajo — in spijo, kot da mislijo resno.',
+                store: 'Voda. Dokler nisi sit te besede. Koža, ki je suha, izgleda sivo — peptid ali ne. Barva s krožnika, ne iz dvanajstih priboljškov. Sladkor in alkohol delata ten umazan. Če hočeš čisto barvo, jej čisto. To ni zapleteno. To je dolgočasno. Dolgočasno deluje. Nestrpnost ne. Jej, pij, drži. Maksimalni izkoristek te spojine ni v nestrpnosti. Je v krožniku, ki ga držiš, ko drugi že obupajo.',
+                max: 'Postopnost. Ne nestrpnost. Gibanje za pretok. Ne 12 ur na kavču in potem panika na soncu. Ta stran ne daje odmerkov, časov na soncu in receptov za pečenje. Povem ti tole: če iščeš barvo čez noč, si na napačnem mestu. Če si pripravljen biti dosleden — spanec, voda, krožnik, gibanje, pamet, čas — ima spojina smisel. Če ne, kupuješ nestrpnost. Potrudi se. Barva pride k tistim, ki počakajo in delajo, ko drugi že obupajo. Telo, ki se giblje in spi, izgleda drugače. Vedno.'
+            }
+        };
         const reviews = [
-            { name:"Rok Novak", stars:"★ ★ ★ ★ ★", rating:5, product:"BPC-157 (5mg) + TB-500 (5mg)", text:"Po mesecih bolečin v rami zaradi uteži se je zadeva po 3 tednih uporabe zrihtala. Top komunikacija na FB, odpošljeno takoj!" },
-            { name:"Anja Kovač", stars:"★ ★ ★ ★ ★", rating:5, product:"GHK-Cu (100mg)", text:"Koža na obrazu je opazno bolj napeta, tekstura se je čisto spremenila. Vsekakor še naročim!" },
-            { name:"Matej Zupančič", stars:"★ ★ ★ ★ ☆", rating:4, product:"Retatrutide (20mg)", text:"Apetit se je zmanjšal praktično naslednji dan. Kilogrami gredo lepo dol. Enih 4/5 zvezdic dam samo zato, ker sem moral na odgovore na FB vmes čakati par ur, ampak paket je prišel hitro." },
-            { name:"Katja Oblak", stars:"★ ★ ★ ★ ★", rating:5, product:"KLOW (80mg)", text:"Za ta lepotni mix sem izvedela od prijateljice in sem navdušena. Ten je super sijoč, vsi opazijo razliko." },
-            { name:"Luka Breznik", stars:"★ ★ ★ ★ ★", rating:5, product:"Semax (5mg)", text:"Fokus v pisarni med izpitnim obdobjem je bil neverjeten. Brez kofeinskega 'crash-a', le čista mentalna jasnost." },
-            { name:"Lara Hribar", stars:"★ ★ ★ ★ ☆", rating:4, product:"Melanotan-1 (MT-1)", text:"Super barva že po dveh izpostavljanjih soncu! Dajem 4 zvezdice, ker sem na začetku imela malo lahke slabosti, ampak je hitro minilo." }
+            { name:"Rok Novak", stars:"★ ★ ★ ★ ★", rating:5, product:"BPC-157 (5mg) + TB-500 (5mg)", text:"Rama me je kradla mesece. Ko sem začel resno spati, jesti beljakovine in nehati trenirati skozi bolečino, se je v treh tednih umirila. Komunikacija na FB top, paket takoj. To ni čarovnija — ampak brez te mešanice in brez dela bi še vedno izgovarjal." },
+            { name:"Anja Kovač", stars:"★ ★ ★ ★ ★", rating:5, product:"GHK-Cu (100mg)", text:"Koža na obrazu je napeta, tekstura je druga. Pila sem vodo, spala, nehala z vikend kaosom. Razlika se vidi. Še naročim. To je za tiste, ki se pogledajo v ogledalo in nočejo izgovorov." },
+            { name:"Matej Zupančič", stars:"★ ★ ★ ★ ☆", rating:4, product:"Retatrutide (20mg)", text:"Apetit se je umiril skoraj takoj. Kilogrami gredo, ker sem končno jedel kot odrasel, spal in hodil. 4/5 samo zato, ker sem na FB čakal par ur. Paket je prišel hitro. Če ne treniraš, ne pričakuj čudeža. Jaz sem se potrudil — in se vidi." },
+            { name:"Katja Oblak", stars:"★ ★ ★ ★ ★", rating:5, product:"KLOW (80mg)", text:"Za ta mix sem izvedela od prijateljice. Ten je čist, vsi vprašajo, kaj delam. Delam spanec, vodo, prehrano in to. Ostalo je izgovor. Navdušena." },
+            { name:"Luka Breznik", stars:"★ ★ ★ ★ ★", rating:5, product:"Semax (5mg)", text:"Izpitno obdobje. Fokus čist, brez kofeinskega padca. Ampak šele ko sem ugasnil telefon, spal in nehal jesti sladko ob enajstih. Semax ne piše naloge. Jaz sem jo. On je samo odstranil meglo." },
+            { name:"Lara Hribar", stars:"★ ★ ★ ★ ☆", rating:4, product:"Melanotan-1 (MT-1)", text:"Barva je prišla postopoma, ne čez noč. 4 zvezdice, ker sem na začetku imela malo nelagodja, hitro minilo. Kdor čaka instant in ne spi, naj niti ne piše. Jaz sem počakala, pila vodo — in izgleda." }
         ];
         function render(items) {
             document.getElementById('product-grid').innerHTML = items.map((p, i) => `
@@ -344,7 +430,7 @@
                 <a class="lab-card" href="${p.testUrl}" onclick="return openTest(event, '${p.testUrl}')" style="animation-delay:${i * 0.07}s">
                     <span class="lab-badge">JANOSHIK VERIFY</span>
                     <h3>${p.name}</h3>
-                    <p>Neodvisni laboratorijski test. Klikni in odpri originalno poročilo na Janoshik.</p>
+                    <p>Neodvisni laboratorij. Brez povzetkov, brez olepševanja. Klikni in odpri originalno poročilo Janoshik — sam. Zaupanje ni slogan. Je dokument.</p>
                     <span class="lab-card-cta">Poglej test →</span>
                 </a>`).join('');
             grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -354,16 +440,16 @@
             if (e && e.target) e.target.classList.add('active');
             document.getElementById('product-grid').innerHTML = `
                 <div class="howto-panel">
-                    <div class="howto-head"><h2>Kako naročiti?</h2><p>Trije koraki. Brez košarice, brez registracije — samo sporočilo.</p></div>
+                    <div class="howto-head"><h2>Kako naročiti?</h2><p>Trije koraki. Potem si na potezi ti. Brez košarice. Brez izgovorov. Izbereš. Napišeš. Dobimo se — in ti se vrneš k delu na sebi.</p></div>
                     <div class="howto-steps">
                         <div class="howto-step s1" style="animation-delay:0.05s">
                             <div class="step-num">01</div><h3>Izberi izdelek</h3>
-                            <p>Odpri katalog, preberi opis in, kjer obstaja, odpri laboratorijski test. Ko veš, kaj želiš, pojdi na korak 2.</p>
+                            <p>Ne brskaj v nedogled. Tisto, kar te je pripeljalo sem, ima ime. Odpri. Preberi. Če obstaja test — preveri. Ko veš, da je to tisto, ne odlašaj. Izberi. In se pripravi, da boš zraven tudi spal, jedel in treniral.</p>
                             <div class="howto-actions"><button class="howto-btn catalog" onclick="goToCatalog()">Poglej katalog</button></div>
                         </div>
                         <div class="howto-step s2" style="animation-delay:0.14s">
                             <div class="step-num">02</div><h3>Piši nam</h3>
-                            <p>Napiši ime izdelka. Odpre se neposreden klepet — izberi kanal, ki ti bolj ustreza.</p>
+                            <p>Piši, kot da misliš resno. WhatsApp ali Messenger. Brez bota. Reci, katero spojino hočeš. Odgovorimo mi — ne avtomat. En klepet. Potem si spet na potezi ti.</p>
                             <div class="howto-actions">
                                 <a href="${WA_CHAT}" class="howto-btn wa" onclick="return openWhatsApp(event)">WhatsApp</a>
                                 <a href="${FB_CHAT}" class="howto-btn msg" onclick="return openMessenger(event)">Messenger</a>
@@ -371,12 +457,69 @@
                         </div>
                         <div class="howto-step s3" style="animation-delay:0.23s">
                             <div class="step-num">03</div><h3>Plačilo + pošiljanje</h3>
-                            <p>Plačilo dogovorimo v sporočilu. Paket odpremimo s <strong style="color:#b9f6ca">Pošto Slovenije</strong>.</p>
+                            <p>Plačilo dogovorimo v sporočilu. Paket gre s <strong style="color:#b9f6ca">Pošto Slovenije</strong>. Ti se osredotoči na spanec, prehrano in trening. Mi na to, da pride do tebe. Tam se zgodi izkoristek. Ne v košarici.</p>
                             <div class="howto-note">Pošiljanje po Sloveniji · hitra odprema po potrditvi</div>
                         </div>
                     </div>
                 </div>`;
             document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function showMaxTips(e) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (e && e.target) e.target.classList.add('active');
+            document.getElementById('product-grid').innerHTML = `
+                <div class="max-panel">
+                    <div class="max-head">
+                        <h2>Peptid naredi pol. Ti narediš ostalo.</h2>
+                        <p>Maksimalni izkoristek ni več mililitrov v viali. Je spanec, krožnik in trening. Če se nočeš potruditi, peptid nima na čem delati. Klikni spojino. Povejemo ti točno, kaj moraš narediti ti — če hočeš rezultat, ki ga iščeš.</p>
+                    </div>
+                    <div class="max-pillars">
+                        <div class="max-pillar" style="animation-delay:0.04s">
+                            <span class="max-num">01 · NEPOGOJNO</span>
+                            <h3>Spanec</h3>
+                            <p>7 do 9 ur. Isti ritem. Temna soba. Telefon ven. Če tukaj kradeš, peptid nima goriva. To ni nasvet. To je pogoj. Brez noči ni izkoristka.</p>
+                        </div>
+                        <div class="max-pillar" style="animation-delay:0.1s">
+                            <span class="max-num">02 · NEPOGOJNO</span>
+                            <h3>Prehrana</h3>
+                            <p>Beljakovine. Voda. Doslednost. Ne od ponedeljka. Peptid ne izbere tvojega krožnika. Ti ga. Vsak dan. Tam se hrani rezultat.</p>
+                        </div>
+                        <div class="max-pillar" style="animation-delay:0.16s">
+                            <span class="max-num">03 · NEPOGOJNO</span>
+                            <h3>Trening</h3>
+                            <p>Nihče ne dviguje namesto tebe. Dražljaj. Počitek. Ponovitev. Brez tega je vialka samo draga navada. Telo se spremeni, ko ga zahtevaš.</p>
+                        </div>
+                    </div>
+                    <div class="max-grid">
+                        ${catalog.map((p, i) => `
+                            <button type="button" class="max-card" style="animation-delay:${i * 0.05}s" onclick="openProtocol('${p.id}')">
+                                <span class="max-num">${p.tag}</span>
+                                <h3>${p.name}</h3>
+                                <p>Kaj moraš narediti ti: spanec · prehrana · trening. Odpri načrt za to spojino.</p>
+                                <span class="max-cta">Odpri načrt →</span>
+                            </button>`).join('')}
+                    </div>
+                    <p class="max-note">Če nočeš spati, jesti in trenirati, ne pričakuj rezultata. Peptid je prednost — ne nadomestilo za delo. Samo za raziskovalne namene. 18+. To ni zdravilo in ni navodilo za uporabo pri ljudeh.</p>
+                    <div class="max-back-wrap"><button type="button" class="max-back" onclick="goToCatalog()">NAZAJ NA KATALOG</button></div>
+                </div>`;
+            document.getElementById('product-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function openProtocol(id) {
+            const p = catalog.find(x => x.id === id);
+            const pr = protocols[id];
+            if (!p || !pr) return;
+            currentProductName = p.name;
+            document.getElementById('p-title').innerText = p.name;
+            document.getElementById('p-sub').innerText = p.sub;
+            document.getElementById('p-recon').innerText = pr.recon;
+            document.getElementById('p-store').innerText = pr.store;
+            document.getElementById('p-max').innerText = pr.max;
+            const orderBtn = document.getElementById('protocol-order-btn');
+            if (orderBtn) orderBtn.href = FB_CHAT + "?text=" + encodeURIComponent("Pozdravljeni, zanima me " + p.name + ".");
+            document.getElementById('protocol-modal').classList.add('active');
+        }
+        function closeProtocol() {
+            document.getElementById('protocol-modal').classList.remove('active');
         }
         function showAbout(e) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -385,7 +528,7 @@
                 <div class="about-panel">
                     <div class="about-head">
                         <h2>O nas</h2>
-                        <p>Iz Slovenije. Izbran katalog. Neposreden stik, brez hrupa.</p>
+                        <p>Iz Slovenije. Ozek katalog. Neposreden stik. Za tiste, ki vedo, kaj hočejo — in so pripravljeni za to tudi delati.</p>
                     </div>
                     <div class="about-stats">
                         <div class="about-stat" style="animation-delay:0.05s"><strong>2026</strong><span>Začetek</span></div>
@@ -394,15 +537,15 @@
                         <div class="about-stat" style="animation-delay:0.2s"><strong>LAB</strong><span>Janoshik testi</span></div>
                     </div>
                     <div class="about-card">
-                        <p>MIA LAB ni veletrgovina in ni naključni profil. Je ozek, izbran katalog raziskovalnih spojin. Odpreš opis, kjer je na voljo laboratorijski test, ga preveriš sam in nam v minuti napišeš. Brez registracije. Brez košarice. Brez petnajstih korakov.</p>
-                        <p>Delamo iz Slovenije. Odgovarjamo osebno, prek WhatsAppa ali Messengerja. Ko je naročilo potrjeno, paket odpremimo s Pošto Slovenije. Ne obljubljamo dostave čez noč. Obljubljamo jasen izbor, neposreden odgovor in pošiljanje po dogovoru.</p>
+                        <p>MIA LAB ni veletrgovina. Ni naključni profil in ni seznam stotih vial, da se izgubiš. Je ozek, izbran katalog za ljudi, ki vedo, kaj hočejo — in ki razumejo, da peptid ni čudež, ampak prednost. Odpreš opis. Kjer je test, ga preveriš sam. Napišeš nam. V minuti. Brez registracije. Brez košarice. Brez petnajstih korakov in praznih obljub.</p>
+                        <p>Delamo iz Slovenije. Odgovarjamo osebno, prek WhatsAppa ali Messengerja. Ko je naročilo potrjeno, paket odpremimo s Pošto Slovenije. Ne obljubljamo čudeža čez noč. Obljubljamo jasen izbor, neposreden odgovor in pošiljanje po dogovoru. Ostalo — spanec, prehrana, trening — je tvoje. Tam se zgodi izkoristek. Ne v košarici. Če tega nočeš slišati, nisi naša stranka.</p>
                         <h3>Kdo smo</h3>
-                        <p>Začeli smo leta 2026, ker je večina katalogov v tem segmentu izgledala enako: predolgi seznami, brez testov in brez konkretnega stika. Šli smo v nasprotno smer. Manj izdelkov. Več preglednosti. Osebni odgovor namesto bota. Če česa ni na zalogi, to povemo. Če je, gre naročilo naprej.</p>
+                        <p>Začeli smo leta 2026, ker je ta prostor smrdel po praznih obljubah: predolgi katalogi, nič testov, bot namesto človeka, in tišina o tem, da moraš delati na sebi. Šli smo v nasprotno smer. Manj izdelkov. Več preglednosti. Osebni odgovor. In ena resnica: če se nočeš potruditi, peptid nima na čem delati. Če česa ni na zalogi, to povemo. Če je, gre naročilo naprej. Za tiste, ki se ne skrivajo za izgovori.</p>
                         <h3>Kaj delamo drugače</h3>
-                        <p>Katalog je namenoma kratek: trenutno osem izbranih spojin, razvrščenih po namenu. To so metabolizem, obnova tkiv, rastni hormon, fokus in estetika. Vsaka ima kratek opis, ceno in, kjer obstaja neodvisni laboratorijski test Janoshik, gumb do originalnega poročila. Poročila ne povzemamo. Odpreš ga sam.</p>
+                        <p>Katalog je kratek namenoma. Osem izbranih spojin: metabolizem, obnova tkiv, rastni hormon, fokus, estetika. Vsaka ima ceno, opis in kjer obstaja neodvisni laboratorijski test Janoshik — gumb do originalnega poročila. Poročila ne povzemamo. Odpreš ga sam. Ker zaupanje ni slogan. Je dokument. In ker rezultat ni obljuba v oglasu. Je spanec, krožnik in trening — plus spojina, ki jo vzameš resno.</p>
                         <h3>Kako poteka stik</h3>
-                        <p>Naročilo in vprašanja gredo neposredno v sporočilo. Napišeš ime spojine. Dogovorimo se o zalogi, plačilu in naslovu. Pošiljamo po Sloveniji s Pošto Slovenije. Ni klicnega centra in ni čakalne vrste. Če pišeš, odgovorimo mi.</p>
-                        <p>Samo za raziskovalne namene. 18+. To ni zdravilo in ni prehransko dopolnilo. Informacije na strani so informativne. Kupec je odgovoren za skladnost z zakonodajo svoje države.</p>
+                        <p>Naročilo je sporočilo. Napišeš ime spojine. Dogovorimo se o zalogi, plačilu in naslovu. Pošiljamo po Sloveniji s Pošto Slovenije. Ni klicnega centra. Ni čakalne vrste. Če pišeš, odgovorimo mi. Ti se vrneš k delu na sebi. Tam, kjer se vidi, kdo je mislil resno.</p>
+                        <p>Samo za raziskovalne namene. 18+. To ni zdravilo in ni prehransko dopolnilo. Informacije na strani so informativne. Kupec je odgovoren za skladnost z zakonodajo svoje države. Če iščeš čudež brez spanca, prehrane in treninga, nisi naša stranka.</p>
                     </div>
                     <div class="about-back-wrap">
                         <button type="button" class="about-back" onclick="goToCatalog()">NAZAJ</button>
@@ -458,6 +601,9 @@
         }
         document.getElementById('details-modal').addEventListener('click', function(e) {
             if (e.target.id === 'details-modal') closeModal();
+        });
+        document.getElementById('protocol-modal').addEventListener('click', function(e) {
+            if (e.target.id === 'protocol-modal') closeProtocol();
         });
         render(catalog);
         renderReviews();
